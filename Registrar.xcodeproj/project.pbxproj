@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76F863AC298591BD00C621DE /* AddressTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F863AB298591BD00C621DE /* AddressTableViewController.swift */; };
 		A857113329857D89008322A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A857113229857D89008322A9 /* AppDelegate.swift */; };
 		A857113529857D89008322A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A857113429857D89008322A9 /* SceneDelegate.swift */; };
 		A857113729857D89008322A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A857113629857D89008322A9 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		76F863AB298591BD00C621DE /* AddressTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressTableViewController.swift; sourceTree = "<group>"; };
 		A857112F29857D89008322A9 /* Registrar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Registrar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A857113229857D89008322A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A857113429857D89008322A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				A857113629857D89008322A9 /* ViewController.swift */,
+				76F863AB298591BD00C621DE /* AddressTableViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76F863AC298591BD00C621DE /* AddressTableViewController.swift in Sources */,
 				A857113729857D89008322A9 /* ViewController.swift in Sources */,
 				A857113329857D89008322A9 /* AppDelegate.swift in Sources */,
 				A857113529857D89008322A9 /* SceneDelegate.swift in Sources */,
