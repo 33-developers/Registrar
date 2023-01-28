@@ -17,20 +17,77 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOv-z9-gCY">
-                                <rect key="frame" x="20" y="643" width="335" height="35"/>
+                                <rect key="frame" x="20" y="628" width="335" height="50"/>
+                                <color key="backgroundColor" red="0.0086950669070000007" green="0.75654411320000003" blue="0.76693606380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Войти">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <segue destination="E9V-QS-Al6" kind="show" id="nt8-S3-dIn"/>
                                 </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HNj-QT-r2d">
+                                <rect key="frame" x="20" y="461" width="335" height="88"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Почта" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T5H-7I-9Xc">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Iz-Hf-gYf">
+                                        <rect key="frame" x="0.0" y="54" width="335" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добро пожаловать!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRe-QJ-xvA">
+                                <rect key="frame" x="20" y="363" width="335" height="28.666666666666686"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите свою почту и пароль для входа" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8O-KE-j7b">
+                                <rect key="frame" x="20" y="411.66666666666669" width="335" height="19.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <color key="textColor" red="0.79781907799999996" green="0.79785889389999998" blue="0.8041980863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avtorization_v2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ght-PV-olC">
+                                <rect key="frame" x="-20" y="143" width="415" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Nan-xo-0tp"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tO8-Ns-l4D">
+                                <rect key="frame" x="201.66666666666663" y="559" width="153.33333333333337" height="34.333333333333371"/>
+                                <color key="tintColor" red="0.79781907799999996" green="0.79785889389999998" blue="0.8041980863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Забыли пароль?"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VVq-k5-p0Z"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="HNj-QT-r2d" firstAttribute="leading" secondItem="VVq-k5-p0Z" secondAttribute="leading" constant="20" id="2Lh-Dt-cst"/>
+                            <constraint firstItem="jRe-QJ-xvA" firstAttribute="leading" secondItem="VVq-k5-p0Z" secondAttribute="leading" constant="20" id="8GJ-kb-7Aa"/>
+                            <constraint firstItem="VVq-k5-p0Z" firstAttribute="trailing" secondItem="jRe-QJ-xvA" secondAttribute="trailing" constant="20" id="AO5-rT-nAw"/>
+                            <constraint firstItem="tO8-Ns-l4D" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="VVq-k5-p0Z" secondAttribute="leading" symbolic="YES" id="DSw-QY-QiP"/>
+                            <constraint firstItem="p8O-KE-j7b" firstAttribute="leading" secondItem="VVq-k5-p0Z" secondAttribute="leading" constant="20" id="E7I-S5-S0j"/>
+                            <constraint firstItem="VVq-k5-p0Z" firstAttribute="trailing" secondItem="p8O-KE-j7b" secondAttribute="trailing" constant="20" id="Pgt-el-KNP"/>
                             <constraint firstItem="VVq-k5-p0Z" firstAttribute="bottom" secondItem="VOv-z9-gCY" secondAttribute="bottom" constant="100" id="Rcg-kM-Z6I"/>
                             <constraint firstItem="VOv-z9-gCY" firstAttribute="leading" secondItem="VVq-k5-p0Z" secondAttribute="leading" constant="20" id="TkW-32-BCt"/>
+                            <constraint firstItem="tO8-Ns-l4D" firstAttribute="top" secondItem="HNj-QT-r2d" secondAttribute="bottom" constant="10" id="X7l-mX-L4J"/>
+                            <constraint firstItem="VVq-k5-p0Z" firstAttribute="trailing" secondItem="HNj-QT-r2d" secondAttribute="trailing" constant="20" id="XRR-yn-dRo"/>
+                            <constraint firstItem="jRe-QJ-xvA" firstAttribute="top" secondItem="Ght-PV-olC" secondAttribute="bottom" constant="20" id="XX8-o4-3p3"/>
+                            <constraint firstItem="Ght-PV-olC" firstAttribute="top" secondItem="VVq-k5-p0Z" secondAttribute="top" id="XnZ-8m-pph"/>
+                            <constraint firstItem="HNj-QT-r2d" firstAttribute="top" secondItem="p8O-KE-j7b" secondAttribute="bottom" constant="30" id="aqB-uh-bEQ"/>
                             <constraint firstItem="VVq-k5-p0Z" firstAttribute="trailing" secondItem="VOv-z9-gCY" secondAttribute="trailing" constant="20" id="fXM-eY-53N"/>
+                            <constraint firstItem="p8O-KE-j7b" firstAttribute="top" secondItem="jRe-QJ-xvA" secondAttribute="bottom" constant="20" id="oVy-bZ-SHf"/>
+                            <constraint firstItem="Ght-PV-olC" firstAttribute="centerX" secondItem="ALn-CR-tho" secondAttribute="centerX" id="pnx-lk-LPj"/>
+                            <constraint firstItem="VVq-k5-p0Z" firstAttribute="trailing" secondItem="tO8-Ns-l4D" secondAttribute="trailing" constant="20" id="sbs-r5-yvm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fdB-ay-UWN"/>
@@ -79,9 +136,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="3j8-NC-fP4"/>
-                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Анкета" id="FZu-Re-NP9"/>
+                    <tabBarItem key="tabBarItem" title="Анкета" image="list.bullet.clipboard" catalog="system" id="FZu-Re-NP9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NNL-hf-tjD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -95,9 +152,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="gIp-xz-q9n"/>
-                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Осмотры" id="cKw-PE-ExD"/>
+                    <tabBarItem key="tabBarItem" title="Осмотры" image="photo" catalog="system" id="cKw-PE-ExD"/>
                     <navigationItem key="navigationItem" id="aZa-54-F4W"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OGC-Ll-mIx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -114,7 +171,7 @@
                         <viewLayoutGuide key="safeArea" id="FnD-oi-3RN"/>
                         <color key="backgroundColor" systemColor="systemBrownColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Общее" id="DVk-JV-kWp"/>
+                    <tabBarItem key="tabBarItem" title="Общее" image="info.bubble" catalog="system" id="DVk-JV-kWp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EIZ-O0-QKh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -160,17 +217,21 @@
         </scene>
     </scenes>
     <resources>
+        <image name="avtorization_v2.png" width="415" height="300"/>
+        <image name="info.bubble" catalog="system" width="128" height="110"/>
+        <image name="list.bullet.clipboard" catalog="system" width="103" height="128"/>
+        <image name="photo" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBrownColor">
             <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
