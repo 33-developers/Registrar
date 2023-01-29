@@ -14,6 +14,10 @@
 		A857113A29857D89008322A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A857113829857D89008322A9 /* Main.storyboard */; };
 		A857113C29857D8A008322A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A857113B29857D8A008322A9 /* Assets.xcassets */; };
 		A857113F29857D8A008322A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A857113D29857D8A008322A9 /* LaunchScreen.storyboard */; };
+		A85A83572986546A0066040B /* avto.png in Resources */ = {isa = PBXBuildFile; fileRef = A85A83562986546A0066040B /* avto.png */; };
+		A85A835929865A080066040B /* avto2.png in Resources */ = {isa = PBXBuildFile; fileRef = A85A835829865A080066040B /* avto2.png */; };
+		A85A835B2986C45C0066040B /* avto3.png in Resources */ = {isa = PBXBuildFile; fileRef = A85A835A2986C45C0066040B /* avto3.png */; };
+		A85A835D2986C6E60066040B /* avto4.png in Resources */ = {isa = PBXBuildFile; fileRef = A85A835C2986C6E60066040B /* avto4.png */; };
 		A873D6E9298599950081EE4C /* avtorization.png in Resources */ = {isa = PBXBuildFile; fileRef = A873D6E8298599940081EE4C /* avtorization.png */; };
 		A873D6EB29859B630081EE4C /* avtorization_v2.png in Resources */ = {isa = PBXBuildFile; fileRef = A873D6EA29859B630081EE4C /* avtorization_v2.png */; };
 /* End PBXBuildFile section */
@@ -28,6 +32,10 @@
 		A857113B29857D8A008322A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A857113E29857D8A008322A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A857114029857D8A008322A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A85A83562986546A0066040B /* avto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avto.png; sourceTree = "<group>"; };
+		A85A835829865A080066040B /* avto2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avto2.png; sourceTree = "<group>"; };
+		A85A835A2986C45C0066040B /* avto3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avto3.png; sourceTree = "<group>"; };
+		A85A835C2986C6E60066040B /* avto4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avto4.png; sourceTree = "<group>"; };
 		A873D6E8298599940081EE4C /* avtorization.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avtorization.png; sourceTree = "<group>"; };
 		A873D6EA29859B630081EE4C /* avtorization_v2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avtorization_v2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +103,10 @@
 				A857113B29857D8A008322A9 /* Assets.xcassets */,
 				A873D6E8298599940081EE4C /* avtorization.png */,
 				A873D6EA29859B630081EE4C /* avtorization_v2.png */,
+				A85A83562986546A0066040B /* avto.png */,
+				A85A835829865A080066040B /* avto2.png */,
+				A85A835A2986C45C0066040B /* avto3.png */,
+				A85A835C2986C6E60066040B /* avto4.png */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -166,11 +178,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A85A835929865A080066040B /* avto2.png in Resources */,
+				A85A835B2986C45C0066040B /* avto3.png in Resources */,
 				A857113F29857D8A008322A9 /* LaunchScreen.storyboard in Resources */,
 				A873D6E9298599950081EE4C /* avtorization.png in Resources */,
+				A85A835D2986C6E60066040B /* avto4.png in Resources */,
 				A873D6EB29859B630081EE4C /* avtorization_v2.png in Resources */,
 				A857113C29857D8A008322A9 /* Assets.xcassets in Resources */,
 				A857113A29857D89008322A9 /* Main.storyboard in Resources */,
+				A85A83572986546A0066040B /* avto.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,8 +353,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -369,8 +385,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
