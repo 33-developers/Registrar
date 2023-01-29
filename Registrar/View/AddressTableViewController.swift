@@ -24,7 +24,8 @@ class AddressTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         var content = cell.defaultContentConfiguration()
-        content.text = "ffff"
+        content.text = "ул Мира д 9"
+        content.secondaryText = "Матиз+Газель"
         cell.contentConfiguration = content
 
         return cell
