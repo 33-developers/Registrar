@@ -17,13 +17,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOv-z9-gCY">
-                                <rect key="frame" x="20" y="628" width="335" height="50"/>
+                                <rect key="frame" x="20" y="630" width="335" height="48"/>
                                 <color key="backgroundColor" red="0.92738097909999995" green="0.44387716049999998" blue="0.40597248079999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Войти">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
-                                </buttonConfiguration>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Войти"/>
                                 <connections>
                                     <segue destination="E9V-QS-Al6" kind="show" id="nt8-S3-dIn"/>
                                 </connections>
@@ -110,18 +109,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Адрес" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RIk-LZ-84m">
-                                <rect key="frame" x="20" y="197" width="335" height="34"/>
+                                <rect key="frame" x="16" y="197" width="343" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qXF-xv-Gdq">
-                                <rect key="frame" x="20" y="678" width="335" height="50"/>
+                                <rect key="frame" x="20" y="680" width="335" height="48"/>
                                 <color key="backgroundColor" red="0.92738097909999995" green="0.44387716049999998" blue="0.40597248079999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Создать заявку">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
-                                </buttonConfiguration>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Создать заявку"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXB-Ub-vGC">
                                 <rect key="frame" x="20" y="251" width="335" height="35"/>
@@ -135,13 +133,13 @@
                         <viewLayoutGuide key="safeArea" id="4RB-w5-qtd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="RIk-LZ-84m" firstAttribute="leading" secondItem="4RB-w5-qtd" secondAttribute="leading" constant="20" id="0tG-j5-nGf"/>
+                            <constraint firstItem="RIk-LZ-84m" firstAttribute="leading" secondItem="4RB-w5-qtd" secondAttribute="leading" constant="16" id="0tG-j5-nGf"/>
                             <constraint firstItem="4RB-w5-qtd" firstAttribute="trailing" secondItem="qXF-xv-Gdq" secondAttribute="trailing" constant="20" id="5aR-pM-ahz"/>
                             <constraint firstItem="uXB-Ub-vGC" firstAttribute="top" secondItem="RIk-LZ-84m" secondAttribute="bottom" constant="20" id="A31-Ym-zxA"/>
                             <constraint firstItem="4RB-w5-qtd" firstAttribute="trailing" secondItem="uXB-Ub-vGC" secondAttribute="trailing" constant="20" id="Aqr-xS-cEa"/>
                             <constraint firstItem="6Fg-LI-aax" firstAttribute="top" secondItem="4RB-w5-qtd" secondAttribute="top" constant="20" id="OaZ-gh-sw4"/>
                             <constraint firstItem="uXB-Ub-vGC" firstAttribute="leading" secondItem="4RB-w5-qtd" secondAttribute="leading" constant="20" id="Tbn-hF-VHX"/>
-                            <constraint firstItem="4RB-w5-qtd" firstAttribute="trailing" secondItem="RIk-LZ-84m" secondAttribute="trailing" constant="20" id="VHj-Lw-p93"/>
+                            <constraint firstItem="4RB-w5-qtd" firstAttribute="trailing" secondItem="RIk-LZ-84m" secondAttribute="trailing" constant="16" id="VHj-Lw-p93"/>
                             <constraint firstItem="4RB-w5-qtd" firstAttribute="bottom" secondItem="qXF-xv-Gdq" secondAttribute="bottom" constant="50" id="Wlz-Lj-xcZ"/>
                             <constraint firstItem="RIk-LZ-84m" firstAttribute="top" secondItem="6Fg-LI-aax" secondAttribute="bottom" constant="10" id="epX-a5-BAh"/>
                             <constraint firstItem="6Fg-LI-aax" firstAttribute="leading" secondItem="4RB-w5-qtd" secondAttribute="leading" constant="20" id="gSo-zP-OuK"/>
@@ -162,8 +160,74 @@
                     <view key="view" contentMode="scaleToFill" id="odD-ca-soC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="755"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Участник № 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xwm-pW-653">
+                                <rect key="frame" x="16" y="67" width="339" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="FVE-4Q-iDl">
+                                <rect key="frame" x="16" y="107.33333333333331" width="343" height="425.99999999999994"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ФИО" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rAl-dt-E5y">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Марка автомобиля" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iWk-fW-LK0">
+                                        <rect key="frame" x="0.0" y="49.000000000000014" width="343" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Модель автомобиля" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LGF-Up-3ju">
+                                        <rect key="frame" x="0.0" y="98.000000000000014" width="343" height="33.999999999999986"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Гос. номер" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UEj-OV-5nB">
+                                        <rect key="frame" x="0.0" y="147" width="343" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Название страховой компании" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gwq-N3-TDv">
+                                        <rect key="frame" x="0.0" y="196" width="343" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Серия полиса ОСАГО" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qtw-VI-0ZQ">
+                                        <rect key="frame" x="0.0" y="245" width="343" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Номер полиса ОСАГО" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xlU-Sw-Ypr">
+                                        <rect key="frame" x="0.0" y="294" width="343" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Серия полиса КАСКО" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iNO-yU-Pea">
+                                        <rect key="frame" x="0.0" y="343" width="343" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Номер полиса КАСКО" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X8A-4l-7vy">
+                                        <rect key="frame" x="0.0" y="392" width="343" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="2JD-k4-Oim"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xwm-pW-653" firstAttribute="top" secondItem="2JD-k4-Oim" secondAttribute="top" constant="20" id="ArG-rz-AVs"/>
+                            <constraint firstItem="FVE-4Q-iDl" firstAttribute="leading" secondItem="2JD-k4-Oim" secondAttribute="leading" constant="16" id="HOs-z0-Gft"/>
+                            <constraint firstItem="2JD-k4-Oim" firstAttribute="trailing" secondItem="xwm-pW-653" secondAttribute="trailing" constant="20" id="KyA-dX-Q2h"/>
+                            <constraint firstItem="xwm-pW-653" firstAttribute="leading" secondItem="2JD-k4-Oim" secondAttribute="leading" constant="16" id="X0q-qO-8Y5"/>
+                            <constraint firstItem="FVE-4Q-iDl" firstAttribute="top" secondItem="xwm-pW-653" secondAttribute="bottom" constant="20" id="Y2b-wa-lJn"/>
+                            <constraint firstItem="2JD-k4-Oim" firstAttribute="trailing" secondItem="FVE-4Q-iDl" secondAttribute="trailing" constant="16" id="Z4m-5U-bu1"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aMd-GG-ESA"/>
                 </viewController>
