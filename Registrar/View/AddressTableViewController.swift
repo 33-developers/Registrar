@@ -8,25 +8,27 @@
 import UIKit
 
 class AddressTableViewController: UITableViewController {
+    
+    var person: Person!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Заявки"
 
     }
-
+    
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        person.request.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let person = person.request[indexPath.row]
         var content = cell.defaultContentConfiguration()
-        content.text = "ул Мира д 9"
-        content.secondaryText = "Матиз+Газель"
+        content.text = person.address
         cell.contentConfiguration = content
 
         return cell
@@ -76,14 +78,11 @@ class AddressTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
+    
+//     MARK: - Navigation
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//
+//    }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

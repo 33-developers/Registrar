@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Authorization View Controller-->
         <scene sceneID="Nzm-GO-vRU">
             <objects>
-                <viewController id="fvT-0c-keC" customClass="ViewController" customModule="Registrar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fvT-0c-keC" customClass="AuthorizationViewController" customModule="Registrar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ALn-CR-tho">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,7 +24,8 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Войти"/>
                                 <connections>
-                                    <segue destination="E9V-QS-Al6" kind="show" id="nt8-S3-dIn"/>
+                                    <action selector="actionAuthorizationButton:" destination="fvT-0c-keC" eventType="touchUpInside" id="zPI-Bb-2XR"/>
+                                    <segue destination="E9V-QS-Al6" kind="show" identifier="address" id="9ef-sz-4Ow"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HNj-QT-r2d">
@@ -32,11 +33,13 @@
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Почта" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T5H-7I-9Xc">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="34"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Iz-Hf-gYf">
                                         <rect key="frame" x="0.0" y="54" width="335" height="34"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -93,6 +96,8 @@
                     <navigationItem key="navigationItem" id="fdB-ay-UWN"/>
                     <connections>
                         <outlet property="authorizationButton" destination="VOv-z9-gCY" id="0dJ-Hc-2RQ"/>
+                        <outlet property="loginTextField" destination="T5H-7I-9Xc" id="Do7-St-jNH"/>
+                        <outlet property="passwordTextField" destination="9Iz-Hf-gYf" id="N1i-kH-NDk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="muj-Mp-Ojk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -178,7 +183,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8gy-mX-vRV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="374" y="-559"/>
+            <point key="canvasLocation" x="490" y="-1051"/>
         </scene>
         <!--Member View Controller-->
         <scene sceneID="JS7-hH-7RY">
@@ -285,7 +290,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M9U-7T-t3R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="-559"/>
+            <point key="canvasLocation" x="1183" y="-1051"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="6hx-BO-SVb">
@@ -332,12 +337,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IK2-fV-Fr3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1770.4000000000001" y="-547.53694581280786"/>
+            <point key="canvasLocation" x="1852" y="-1051"/>
         </scene>
         <!--Address Table View Controller-->
         <scene sceneID="rS2-F7-Fsg">
             <objects>
-                <tableViewController modalPresentationStyle="fullScreen" id="E9V-QS-Al6" customClass="AddressTableViewController" customModule="Registrar" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="address" modalPresentationStyle="fullScreen" id="E9V-QS-Al6" customClass="AddressTableViewController" customModule="Registrar" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="BYl-Ad-dQ5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -363,14 +368,14 @@
                     <navigationItem key="navigationItem" id="Txj-eT-bed">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="tCO-2c-Dwm">
                             <connections>
-                                <segue destination="4Xu-4L-IEp" kind="show" id="7vu-Q2-Fbn"/>
+                                <segue destination="4Xu-4L-IEp" kind="show" id="B0U-ep-ubb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fm3-m1-Tx7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-319" y="-559"/>
+            <point key="canvasLocation" x="-274" y="-559"/>
         </scene>
         <!--Анкета-->
         <scene sceneID="P08-go-QUx">
@@ -440,7 +445,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fCg-vl-lfY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-319" y="104"/>
+            <point key="canvasLocation" x="-274" y="115"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7is-hb-E7w">
@@ -469,6 +474,9 @@
         <image name="photo" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
