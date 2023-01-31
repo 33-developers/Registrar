@@ -45,7 +45,8 @@ class Member {
     var serialDocument: String
     var numberDocument: String
     
-    init(fullName: String, nameCar: String, modelCar: String, gosNumber: String, companyName: String, serialDocument: String, numberDocument: String) {
+    init(
+        fullName: String, nameCar: String, modelCar: String, gosNumber: String, companyName: String, serialDocument: String, numberDocument: String) {
         self.fullName = fullName
         self.nameCar = nameCar
         self.modelCar = modelCar

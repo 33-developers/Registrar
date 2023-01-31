@@ -1,13 +1,13 @@
 //
-//  NewRequestViewController.swift
+//  NewTicketViewController.swift
 //  Registrar
 //
-//  Created by Игорь Солодянкин on 31.01.2023.
+//  Created by Игорь Солодянкин on 01.02.2023.
 //
 
 import UIKit
 
-class NewRequestViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class NewTicketViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -41,20 +41,7 @@ class NewRequestViewController: UIViewController, UITableViewDelegate, UITableVi
         
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        members.count
-    }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "memberCell", for: indexPath)
-        
-        var content = cell.defaultContentConfiguration()
-        content.text = members[indexPath.row]
-        content.secondaryText = numbers[indexPath.row]
-        cell.contentConfiguration = content
-
-        return cell
-    }
     
     // анимация появления ячеек
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -65,3 +52,21 @@ class NewRequestViewController: UIViewController, UITableViewDelegate, UITableVi
     }
 }
 
+extension NewTicketViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        members.count
+    }
+}
+
+extension NewTicketViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "memberCell", for: indexPath)
+        
+        var content = cell.defaultContentConfiguration()
+        content.text = members[indexPath.row]
+        content.secondaryText = numbers[indexPath.row]
+        cell.contentConfiguration = content
+        
+        return cell
+    }
+}
