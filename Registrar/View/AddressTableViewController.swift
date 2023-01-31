@@ -17,6 +17,11 @@ class AddressTableViewController: UITableViewController {
 
     }
     
+    @IBAction func addNewTicketButton(_ sender: Any) {
+        alertAppendNewTicket()
+    }
+    
+    
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -41,5 +46,27 @@ class AddressTableViewController: UITableViewController {
         UIView.animate(withDuration: 0.5, delay: 0.1 * Double(indexPath.row), options: .curveEaseInOut, animations: {
         cell.alpha = 1
         })
+    }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard let ticketVC = segue.destination as? TicketViewController else { return }
+//
+//        ticketVC.person = person
+//    }
+}
+
+extension AddressTableViewController {
+    func alertAppendNewTicket() {
+        let alert = UIAlertController( title: "Новая заявка", message: "Заполните поле, чтобы продолжить", preferredStyle: .alert)
+        let activeAlert = UIAlertAction(title: "Добавить", style: .default) { _ in
+            guard let expense = alert.textFields?.first?.text, !expense.isEmpty else { return }
+        }
+        let cancelAlert = UIAlertAction(title: "Отмена", style: .destructive)
+        alert.addAction(activeAlert)
+        alert.addAction(cancelAlert)
+        alert.addTextField { textField in
+            textField.placeholder = "Введите адрес"
+        }
+        present(alert, animated: true)
     }
 }
