@@ -20,6 +20,8 @@
 		A85A835D2986C6E60066040B /* avto4.png in Resources */ = {isa = PBXBuildFile; fileRef = A85A835C2986C6E60066040B /* avto4.png */; };
 		A873D6E9298599950081EE4C /* avtorization.png in Resources */ = {isa = PBXBuildFile; fileRef = A873D6E8298599940081EE4C /* avtorization.png */; };
 		A873D6EB29859B630081EE4C /* avtorization_v2.png in Resources */ = {isa = PBXBuildFile; fileRef = A873D6EA29859B630081EE4C /* avtorization_v2.png */; };
+		A886E81F2988E27200E15865 /* NewRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A886E81E2988E27200E15865 /* NewRequestViewController.swift */; };
+		A886E8212988EE6F00E15865 /* MemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A886E8202988EE6F00E15865 /* MemberViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		A85A835C2986C6E60066040B /* avto4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avto4.png; sourceTree = "<group>"; };
 		A873D6E8298599940081EE4C /* avtorization.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avtorization.png; sourceTree = "<group>"; };
 		A873D6EA29859B630081EE4C /* avtorization_v2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avtorization_v2.png; sourceTree = "<group>"; };
+		A886E81E2988E27200E15865 /* NewRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRequestViewController.swift; sourceTree = "<group>"; };
+		A886E8202988EE6F00E15865 /* MemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,8 @@
 			children = (
 				A857113629857D89008322A9 /* ViewController.swift */,
 				76F863AB298591BD00C621DE /* AddressTableViewController.swift */,
+				A886E81E2988E27200E15865 /* NewRequestViewController.swift */,
+				A886E8202988EE6F00E15865 /* MemberViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -197,6 +203,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A886E8212988EE6F00E15865 /* MemberViewController.swift in Sources */,
+				A886E81F2988E27200E15865 /* NewRequestViewController.swift in Sources */,
 				76F863AC298591BD00C621DE /* AddressTableViewController.swift in Sources */,
 				A857113729857D89008322A9 /* ViewController.swift in Sources */,
 				A857113329857D89008322A9 /* AppDelegate.swift in Sources */,

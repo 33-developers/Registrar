@@ -99,10 +99,10 @@
             </objects>
             <point key="canvasLocation" x="-1002" y="-559"/>
         </scene>
-        <!--View Controller-->
+        <!--New Request View Controller-->
         <scene sceneID="tYV-wQ-bfn">
             <objects>
-                <viewController id="4Xu-4L-IEp" sceneMemberID="viewController">
+                <viewController id="4Xu-4L-IEp" customClass="NewRequestViewController" customModule="Registrar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rq0-Xo-ZTH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -139,15 +139,15 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Создать заявку"/>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0qb-Kg-1bT">
-                                <rect key="frame" x="20" y="305.33333333333326" width="335" height="354.66666666666674"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9lV-l1-TP0">
+                                <rect key="frame" x="0.0" y="305.33333333333326" width="375" height="354.66666666666674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="HoW-rW-rca">
-                                        <rect key="frame" x="0.0" y="50" width="335" height="43.666667938232422"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="memberCell" id="nFX-OI-c98">
+                                        <rect key="frame" x="0.0" y="50" width="375" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HoW-rW-rca" id="wwM-Qd-GPu">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="43.666667938232422"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nFX-OI-c98" id="kYV-Eo-lIG">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -158,28 +158,32 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="4RB-w5-qtd" firstAttribute="trailing" secondItem="qXF-xv-Gdq" secondAttribute="trailing" constant="20" id="5aR-pM-ahz"/>
+                            <constraint firstItem="9lV-l1-TP0" firstAttribute="top" secondItem="AKV-YL-vJd" secondAttribute="bottom" constant="20" id="7Fi-Zv-qLG"/>
                             <constraint firstItem="AKV-YL-vJd" firstAttribute="centerX" secondItem="rq0-Xo-ZTH" secondAttribute="centerX" id="Btj-jZ-U5M"/>
-                            <constraint firstItem="qXF-xv-Gdq" firstAttribute="top" secondItem="0qb-Kg-1bT" secondAttribute="bottom" constant="20" id="Hap-vV-5Zt"/>
                             <constraint firstItem="4RB-w5-qtd" firstAttribute="trailing" secondItem="AKV-YL-vJd" secondAttribute="trailing" constant="20" id="N1q-By-HU5"/>
                             <constraint firstItem="AKV-YL-vJd" firstAttribute="leading" secondItem="4RB-w5-qtd" secondAttribute="leading" constant="20" id="QAz-BA-2ze"/>
                             <constraint firstItem="4RB-w5-qtd" firstAttribute="bottom" secondItem="qXF-xv-Gdq" secondAttribute="bottom" constant="50" id="Wlz-Lj-xcZ"/>
+                            <constraint firstItem="qXF-xv-Gdq" firstAttribute="top" secondItem="9lV-l1-TP0" secondAttribute="bottom" constant="20" id="YdA-9v-pFm"/>
+                            <constraint firstItem="9lV-l1-TP0" firstAttribute="leading" secondItem="4RB-w5-qtd" secondAttribute="leading" id="abr-Pw-wni"/>
                             <constraint firstItem="AKV-YL-vJd" firstAttribute="top" secondItem="4RB-w5-qtd" secondAttribute="top" constant="20" id="egj-8r-R5G"/>
-                            <constraint firstItem="0qb-Kg-1bT" firstAttribute="leading" secondItem="4RB-w5-qtd" secondAttribute="leading" constant="20" id="ez7-fS-C6F"/>
-                            <constraint firstItem="0qb-Kg-1bT" firstAttribute="top" secondItem="AKV-YL-vJd" secondAttribute="bottom" constant="20" id="gnj-XZ-k2q"/>
-                            <constraint firstItem="4RB-w5-qtd" firstAttribute="trailing" secondItem="0qb-Kg-1bT" secondAttribute="trailing" constant="20" id="uyS-vd-kpR"/>
+                            <constraint firstItem="4RB-w5-qtd" firstAttribute="trailing" secondItem="9lV-l1-TP0" secondAttribute="trailing" id="vtW-i0-hfT"/>
                             <constraint firstItem="qXF-xv-Gdq" firstAttribute="leading" secondItem="4RB-w5-qtd" secondAttribute="leading" constant="20" id="xdP-Ou-Oos"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Qjb-7e-Q4r"/>
+                    <connections>
+                        <outlet property="addRequestButton" destination="qXF-xv-Gdq" id="boq-I7-348"/>
+                        <outlet property="tableView" destination="9lV-l1-TP0" id="ulO-sL-plp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8gy-mX-vRV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="374" y="-559"/>
         </scene>
-        <!--View Controller-->
+        <!--Member View Controller-->
         <scene sceneID="JS7-hH-7RY">
             <objects>
-                <viewController id="8TD-yh-c0f" sceneMemberID="viewController">
+                <viewController id="8TD-yh-c0f" customClass="MemberViewController" customModule="Registrar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="odD-ca-soC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="755"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -264,6 +268,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aMd-GG-ESA"/>
+                    <connections>
+                        <outlet property="memberButton" destination="rR1-Eu-tgj" id="Mza-AL-LUV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M9U-7T-t3R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
