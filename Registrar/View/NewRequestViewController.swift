@@ -69,5 +69,13 @@ class NewRequestViewController: UIViewController, UITableViewDelegate, UITableVi
 
         return cell
     }
+    
+    // анимация появления ячеек
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.alpha = 0
+        UIView.animate(withDuration: 0.5, delay: 0.1 * Double(indexPath.row), options: .curveEaseInOut, animations: {
+        cell.alpha = 1
+        })
+    }
 }
 
