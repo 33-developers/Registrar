@@ -27,6 +27,7 @@ class Person {
 class Request {
     var address: String
     var status: String
+    var applicationСreated = false
     var members: [Member]
     
     init(address: String, status: String, members: [Member]) {
