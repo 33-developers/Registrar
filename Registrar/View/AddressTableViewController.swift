@@ -32,6 +32,14 @@ class AddressTableViewController: UITableViewController {
         return cell
     }
     
+    // анимация появления ячеек
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.alpha = 0
+        UIView.animate(withDuration: 0.5, delay: 0.1 * Double(indexPath.row), options: .curveEaseInOut, animations: {
+        cell.alpha = 1
+        })
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.
