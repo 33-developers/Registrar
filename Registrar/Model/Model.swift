@@ -26,10 +26,12 @@ class Person {
 
 class Request {
     var address: String
+    var status: String
     var members: [Member]
     
-    init(address: String, members: [Member]) {
+    init(address: String, status: String, members: [Member]) {
         self.address = address
+        self.status = status
         self.members = members
     }
 }

@@ -14,7 +14,8 @@ class DataManager {
         password: "1111",
         request: [
             Request(
-                address: "Мира 2а",
+                address: "Чичерина 44",
+                status: "Закрыта",
                 members: [
                     Member(
                         fullName: "Иванов Иван Иванович",
@@ -38,6 +39,7 @@ class DataManager {
             ),
             Request(
                 address: "250 лет Челябинска - Чичерина",
+                status: "В работе",
                 members: [
                     Member(
                         fullName: "Лис Владислав Владимирович",
@@ -70,6 +72,7 @@ class DataManager {
             ),
             Request(
                 address: "пр. Ленина 17",
+                status: "Не принята",
                 members: [
                     Member(
                         fullName: "Ваймер Игорь Дмитриевич",
@@ -84,6 +87,7 @@ class DataManager {
             ),
             Request(
                 address: "ул. Вагнера 64",
+                status: "Не принята",
                 members: [
                     Member(
                         fullName: "Янушкин Максим Семёнович",
@@ -107,6 +111,7 @@ class DataManager {
             ),
             Request(
                 address: "Свердловский проспект - Сони Кривой",
+                status: "Не принята",
                 members: [
                     Member(
                         fullName: "Айс Нина Степановна",

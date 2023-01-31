@@ -417,8 +417,21 @@
                     <view key="view" contentMode="scaleToFill" id="lUZ-JS-hRT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Адрес: пр. Мира 66" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8k2-AC-J4H">
+                                <rect key="frame" x="20" y="143" width="335" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="FnD-oi-3RN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FnD-oi-3RN" firstAttribute="trailing" secondItem="8k2-AC-J4H" secondAttribute="trailing" constant="20" id="Wyd-XI-8qd"/>
+                            <constraint firstItem="8k2-AC-J4H" firstAttribute="top" secondItem="FnD-oi-3RN" secondAttribute="top" id="k0O-L8-jNh"/>
+                            <constraint firstItem="8k2-AC-J4H" firstAttribute="leading" secondItem="FnD-oi-3RN" secondAttribute="leading" constant="20" id="ueT-yb-hbc"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Общее" image="info.bubble" catalog="system" id="DVk-JV-kWp"/>
                 </viewController>
