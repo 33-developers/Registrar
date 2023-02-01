@@ -22,15 +22,11 @@ class AddressTableViewController: UITableViewController {
     @IBAction func addNewTicketButton(_ sender: Any) {
         alertAppendNewTicket()
     }
-    
-    
-    // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //person.request.count
         ticket.count
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
@@ -41,7 +37,6 @@ class AddressTableViewController: UITableViewController {
 //        content.secondaryText = person.status
         cell.contentConfiguration = content
         
-
         return cell
     }
     
