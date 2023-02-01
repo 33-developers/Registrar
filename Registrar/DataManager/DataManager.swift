@@ -12,7 +12,7 @@ class DataManager {
     let person = Person(
         login: "1111",
         password: "1111",
-        request: [
+        ticket: [
             Ticket(
                 address: "Чичерина 44",
                 status: "Закрыта",
