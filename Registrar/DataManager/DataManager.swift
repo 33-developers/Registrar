@@ -13,7 +13,7 @@ class DataManager {
         login: "1111",
         password: "1111",
         request: [
-            Request(
+            Ticket(
                 address: "Чичерина 44",
                 status: "Закрыта",
                 members: [
@@ -37,7 +37,7 @@ class DataManager {
                     )
                 ]
             ),
-            Request(
+            Ticket(
                 address: "250 лет Челябинска - Чичерина",
                 status: "В работе",
                 members: [
@@ -70,7 +70,7 @@ class DataManager {
                     )
                 ]
             ),
-            Request(
+            Ticket(
                 address: "пр. Ленина 17",
                 status: "Не принята",
                 members: [
@@ -85,7 +85,7 @@ class DataManager {
                     )
                 ]
             ),
-            Request(
+            Ticket(
                 address: "ул. Вагнера 64",
                 status: "Не принята",
                 members: [
@@ -109,7 +109,7 @@ class DataManager {
                     )
                 ]
             ),
-            Request(
+            Ticket(
                 address: "Свердловский проспект - Сони Кривой",
                 status: "Не принята",
                 members: [

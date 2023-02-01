@@ -11,7 +11,7 @@ class AddressTableViewController: UITableViewController {
     
     var person: Person!
     
-    var request: [Request] = []
+    var ticket: [Ticket] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,13 +22,10 @@ class AddressTableViewController: UITableViewController {
     @IBAction func addNewTicketButton(_ sender: Any) {
         alertAppendNewTicket()
     }
-    
-    
-    // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //person.request.count
-        request.count
+        ticket.count
     }
 
     
@@ -36,7 +33,7 @@ class AddressTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         //let person = person.request[indexPath.row]
         var content = cell.defaultContentConfiguration()
-        content.text = request[indexPath.row].address
+        content.text = ticket[indexPath.row].address
 //        content.text = person.address
 //        content.secondaryText = person.status
         cell.contentConfiguration = content
@@ -60,14 +57,14 @@ class AddressTableViewController: UITableViewController {
 //    }
 }
 
-// создать Alert с TextField
+// Alert с TextField и 2 кнопками
 extension AddressTableViewController {
     func alertAppendNewTicket() {
         let alert = UIAlertController( title: "Новая заявка", message: "Заполните поле, чтобы продолжить", preferredStyle: .alert)
         let activeAlert = UIAlertAction(title: "Добавить", style: .default) { _ in
             guard let newAddress = alert.textFields?.first?.text, !newAddress.isEmpty else { return }
-            let request = Request(address: newAddress, status: newAddress, members: [])
-            self.request.append(request)
+            let ticket = Ticket(address: newAddress, status: newAddress, members: [])
+            self.ticket.append(ticket)
             self.tableView.reloadData()
         }
         let cancelAlert = UIAlertAction(title: "Отмена", style: .destructive)
