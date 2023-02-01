@@ -10,12 +10,12 @@ class Person {
     
     let login: String
     let password: String
-    let ticket: [Ticket]
+    var tickets: [Ticket]
     
-    init(login: String, password: String, ticket: [Ticket]) {
+    init(login: String, password: String, tickets: [Ticket]) {
         self.login = login
         self.password = password
-        self.ticket = ticket
+        self.tickets = tickets
     }
     
     static func newPerson() -> Person {
@@ -25,9 +25,9 @@ class Person {
 }
 
 class Ticket {
-    var address: String
-    var status: String
-    var applicationСreated = false
+    let address: String
+    let status: String
+    let ticketСreated = false
     var members: [Member]
     
     init(address: String, status: String, members: [Member]) {
@@ -38,13 +38,13 @@ class Ticket {
 }
 
 class Member {
-    var fullName: String
-    var nameCar: String
-    var modelCar: String
-    var gosNumber: String
-    var companyName: String
-    var serialDocument: String
-    var numberDocument: String
+    let fullName: String
+    let nameCar: String
+    let modelCar: String
+    let gosNumber: String
+    let companyName: String
+    let serialDocument: String
+    let numberDocument: String
     
     init(
         fullName: String, nameCar: String, modelCar: String, gosNumber: String, companyName: String, serialDocument: String, numberDocument: String) {

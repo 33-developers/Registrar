@@ -9,7 +9,8 @@ import UIKit
 
 class NewTicketViewController: UIViewController {
     
-    var person: Person!
+//    var person: Person!
+    var ticket: Ticket!
     
     @IBOutlet weak var addressTextField: UITextField!
     
@@ -26,27 +27,25 @@ class NewTicketViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        addressTextField.text = ticket.address
     }
     
-    func getCountMembers() {
-        for request in person.ticket {
-            for member in request.members {
-                members.append(member)
-            }
-        }
+    // обновления таблицы при добавлении элементов
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
-    
     
 }
 
 extension NewTicketViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        members.count
+        ticket.members.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "memberCell", for: indexPath)
-        let member = members[indexPath.row]
+        let member = ticket.members[indexPath.row]
         var content = cell.defaultContentConfiguration()
         content.text = "\(member.nameCar) \(member.modelCar)"
         content.secondaryText = member.gosNumber
@@ -61,6 +60,12 @@ extension NewTicketViewController: UITableViewDelegate, UITableViewDataSource {
         UIView.animate(withDuration: 0.5, delay: 0.1 * Double(indexPath.row), options: .curveEaseInOut, animations: {
         cell.alpha = 1
         })
+    }
+    
+    // переход на экран участников
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let memberVC = segue.destination as? MemberViewController else { return }
+        memberVC.ticket = ticket
     }
 }
 

@@ -10,31 +10,26 @@ import UIKit
 class AddressTableViewController: UITableViewController {
     
     var person: Person!
+    var tickets: [Ticket] = []
     
-    var ticket: [Ticket] = []
-
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Заявки"
-
+        
     }
     
     @IBAction func addNewTicketButton(_ sender: Any) {
         alertAppendNewTicket()
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //person.request.count
-        ticket.count
+        person.tickets.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        //let person = person.request[indexPath.row]
         var content = cell.defaultContentConfiguration()
-        content.text = ticket[indexPath.row].address
-//        content.text = person.address
-//        content.secondaryText = person.status
+        content.text = person.tickets[indexPath.row].address
         cell.contentConfiguration = content
         
         return cell
@@ -44,19 +39,16 @@ class AddressTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.alpha = 0
         UIView.animate(withDuration: 0.5, delay: 0.1 * Double(indexPath.row), options: .curveEaseInOut, animations: {
-        cell.alpha = 1
+            cell.alpha = 1
         })
     }
-// переход на экран по условию
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let ticketCreated = true
-//        tableView.deselectRow(at: indexPath, animated: true)
-//        if ticketCreated {
-//            performSegue(withIdentifier: "goToNewTicket", sender: self)
-//        } else {
-//            performSegue(withIdentifier: "goToTicket", sender: self)
-//        }
-//    }
+    
+    // передача тикета по тапу
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let index = tableView.indexPathForSelectedRow else { return }
+        guard let ticketVC = segue.destination as? NewTicketViewController else { return }
+        ticketVC.ticket = person.tickets[index.row]
+    }
 }
 
 // Alert с TextField и 2 кнопками
@@ -66,7 +58,7 @@ extension AddressTableViewController {
         let activeAlert = UIAlertAction(title: "Добавить", style: .default) { _ in
             guard let newAddress = alert.textFields?.first?.text, !newAddress.isEmpty else { return }
             let ticket = Ticket(address: newAddress, status: newAddress, members: [])
-            self.ticket.append(ticket)
+            self.person.tickets.append(ticket)
             self.tableView.reloadData()
         }
         let cancelAlert = UIAlertAction(title: "Отмена", style: .destructive)
