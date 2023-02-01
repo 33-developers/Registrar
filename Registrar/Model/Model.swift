@@ -10,9 +10,9 @@ class Person {
     
     let login: String
     let password: String
-    let request: [Request]
+    let request: [Ticket]
     
-    init(login: String, password: String, request: [Request]) {
+    init(login: String, password: String, request: [Ticket]) {
         self.login = login
         self.password = password
         self.request = request
@@ -24,7 +24,7 @@ class Person {
     
 }
 
-class Request {
+class Ticket {
     var address: String
     var status: String
     var applicationСreated = false
