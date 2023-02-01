@@ -52,12 +52,6 @@ class AddressTableViewController: UITableViewController {
         cell.alpha = 1
         })
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let ticketVC = segue.destination as? TicketViewController else { return }
-//
-//        ticketVC.person = person
-//    }
 }
 
 // Alert с TextField и 2 кнопками
