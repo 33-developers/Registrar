@@ -11,6 +11,15 @@ class MemberViewController: UIViewController {
 
     var ticket: Ticket!
     
+    @IBOutlet weak var fullname: UITextField!
+    @IBOutlet weak var nameCar: UITextField!
+    @IBOutlet weak var modelCar: UITextField!
+    @IBOutlet weak var gosNumber: UITextField!
+    @IBOutlet weak var companyName: UITextField!
+    @IBOutlet weak var serialDocument: UITextField!
+    @IBOutlet weak var numberDocument: UITextField!
+    
+    
     @IBOutlet weak var memberButton: UIButton!
     
     override func viewDidLoad() {
@@ -20,26 +29,38 @@ class MemberViewController: UIViewController {
         memberButton.layer.cornerRadius = 10
     }
     
+    @IBAction func actionCheckPolicy(_ sender: UIButton) {
+        if serialDocument.text == "" && numberDocument.text == "" {
+            checkPolicyValidity()
+        }
+    }
+    
+    
     @IBAction func actionAppendNewMember(_ sender: UIButton) {
         newMember()
         navigationController?.popViewController(animated: true)
     }
     
-    
-    
     func newMember() {
         let member = Member(
-            fullName: "12",
-            nameCar: "12",
-            modelCar: "12",
-            gosNumber: "12",
-            companyName: "12",
-            serialDocument: "12",
-            numberDocument: "12")
+            fullName: fullname.text ?? "",
+            nameCar: nameCar.text ?? "",
+            modelCar: modelCar.text ?? "",
+            gosNumber: gosNumber.text ?? "",
+            companyName: companyName.text ?? "",
+            serialDocument: serialDocument.text ?? "",
+            numberDocument: numberDocument.text ?? "")
         
         ticket.members.append(member)
     }
-    
-    
-    
+}
+
+extension MemberViewController {
+    func checkPolicyValidity() {
+        let alert = UIAlertController( title: "Ой...", message: "Заполните поля серия и номер полиса", preferredStyle: .alert)
+        let cancelAlert = UIAlertAction(title: "Отмена", style: .destructive)
+        alert.addAction(cancelAlert)
+        present(alert, animated: true)
+        
+    }
 }
