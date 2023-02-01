@@ -58,7 +58,7 @@ class MemberViewController: UIViewController {
 extension MemberViewController {
     func checkPolicyValidity() {
         let alert = UIAlertController( title: "Ошибка!", message: "Заполните поля серия и номер полиса", preferredStyle: .alert)
-        let cancelAlert = UIAlertAction(title: "Отмена", style: .destructive)
+        let cancelAlert = UIAlertAction(title: "Ok", style: .destructive)
         alert.addAction(cancelAlert)
         present(alert, animated: true)
         
