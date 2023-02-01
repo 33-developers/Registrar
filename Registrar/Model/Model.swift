@@ -10,12 +10,12 @@ class Person {
     
     let login: String
     let password: String
-    let request: [Ticket]
+    let ticket: [Ticket]
     
-    init(login: String, password: String, request: [Ticket]) {
+    init(login: String, password: String, ticket: [Ticket]) {
         self.login = login
         self.password = password
-        self.request = request
+        self.ticket = ticket
     }
     
     static func newPerson() -> Person {

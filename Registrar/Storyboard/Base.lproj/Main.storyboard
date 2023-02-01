@@ -346,9 +346,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="gzo-Z6-X5N" kind="show" id="e6w-2H-zOk"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -364,7 +361,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="4Xu-4L-IEp" kind="show" identifier="goToNewTicket " id="xt1-gJ-eOX"/>
+                        <segue destination="4Xu-4L-IEp" kind="show" identifier="goToNewTicket" id="xt1-gJ-eOX"/>
+                        <segue destination="gzo-Z6-X5N" kind="show" identifier="goToTicket" id="JXp-eM-jku"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fm3-m1-Tx7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

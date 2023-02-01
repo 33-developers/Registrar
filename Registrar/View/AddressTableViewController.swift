@@ -47,6 +47,16 @@ class AddressTableViewController: UITableViewController {
         cell.alpha = 1
         })
     }
+// переход на экран по условию
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let ticketCreated = true
+//        tableView.deselectRow(at: indexPath, animated: true)
+//        if ticketCreated {
+//            performSegue(withIdentifier: "goToNewTicket", sender: self)
+//        } else {
+//            performSegue(withIdentifier: "goToTicket", sender: self)
+//        }
+//    }
 }
 
 // Alert с TextField и 2 кнопками
