@@ -245,7 +245,8 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Проверить полис"/>
                                 <connections>
-                                    <segue destination="bq0-yy-aTz" kind="show" id="mq7-hS-er2"/>
+                                    <action selector="actionCheckPolicy:" destination="8TD-yh-c0f" eventType="touchUpInside" id="hVe-Z8-Q5u"/>
+                                    <segue destination="bq0-yy-aTz" kind="showDetail" id="mq7-hS-er2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rR1-Eu-tgj">
@@ -279,7 +280,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="aMd-GG-ESA"/>
                     <connections>
+                        <outlet property="companyName" destination="gwq-N3-TDv" id="94E-hB-VBS"/>
+                        <outlet property="fullname" destination="rAl-dt-E5y" id="c1j-tF-r0V"/>
+                        <outlet property="gosNumber" destination="UEj-OV-5nB" id="T3c-jc-OpR"/>
                         <outlet property="memberButton" destination="rR1-Eu-tgj" id="avG-eb-fzV"/>
+                        <outlet property="modelCar" destination="LGF-Up-3ju" id="1BX-4S-Wrx"/>
+                        <outlet property="nameCar" destination="iWk-fW-LK0" id="PVR-MU-rV1"/>
+                        <outlet property="numberDocument" destination="xlU-Sw-Ypr" id="2SA-BT-i9t"/>
+                        <outlet property="serialDocument" destination="qtw-VI-0ZQ" id="4sW-S8-TaL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M9U-7T-t3R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -291,14 +299,14 @@
             <objects>
                 <viewController id="bq0-yy-aTz" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fXx-Q6-gYy">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="755"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Error.png" translatesAutoresizingMaskIntoConstraints="NO" id="HK4-Jb-hnB">
-                                <rect key="frame" x="20" y="193.00000000000003" width="335" height="281.66666666666674"/>
+                                <rect key="frame" x="20" y="97" width="335" height="262"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HYw-7I-Xex">
-                                <rect key="frame" x="20" y="494.66666666666669" width="335" height="134.66666666666669"/>
+                                <rect key="frame" x="20" y="379" width="335" height="134.66666666666663"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сервис временно не доступен" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNm-BR-VY7">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="57.333333333333336"/>
