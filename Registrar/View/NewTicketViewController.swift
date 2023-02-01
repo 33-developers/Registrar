@@ -29,6 +29,13 @@ class NewTicketViewController: UIViewController {
         tableView.dataSource = self
         addressTextField.text = ticket.address
     }
+    
+    // обновления таблицы при добавлении элементов
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
 }
 
 extension NewTicketViewController: UITableViewDelegate, UITableViewDataSource {
@@ -43,6 +50,7 @@ extension NewTicketViewController: UITableViewDelegate, UITableViewDataSource {
         content.text = "\(member.nameCar) \(member.modelCar)"
         content.secondaryText = member.gosNumber
         cell.contentConfiguration = content
+        
         return cell
     }
     
@@ -52,6 +60,12 @@ extension NewTicketViewController: UITableViewDelegate, UITableViewDataSource {
         UIView.animate(withDuration: 0.5, delay: 0.1 * Double(indexPath.row), options: .curveEaseInOut, animations: {
         cell.alpha = 1
         })
+    }
+    
+    // переход на экран участников
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let memberVC = segue.destination as? MemberViewController else { return }
+        memberVC.ticket = ticket
     }
 }
 

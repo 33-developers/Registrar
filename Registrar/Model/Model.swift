@@ -28,7 +28,7 @@ class Ticket {
     let address: String
     let status: String
     let ticketСreated = false
-    let members: [Member]
+    var members: [Member]
     
     init(address: String, status: String, members: [Member]) {
         self.address = address
