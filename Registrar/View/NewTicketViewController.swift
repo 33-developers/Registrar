@@ -29,12 +29,14 @@ class NewTicketViewController: UIViewController {
     }
     
     func getCountMembers() {
-        for request in person.request {
+        for request in person.ticket {
             for member in request.members {
                 members.append(member)
             }
         }
     }
+    
+    
     
     
 }
