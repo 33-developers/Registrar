@@ -501,7 +501,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="33devs" width="200" height="200"/>
+        <image name="33devs" width="2362" height="2362"/>
         <image name="Error.png" width="404.39999389648438" height="442.32000732421875"/>
         <image name="avto4.png" width="700.32000732421875" height="441.60000610351562"/>
         <image name="info.circle.fill" catalog="system" width="128" height="123"/>
