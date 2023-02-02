@@ -24,6 +24,9 @@ class AuthorizationViewController: UIViewController {
         
     }
 
+    @IBAction func aboutButtonTapped(_ sender: UIBarButtonItem) {
+    }
+    
     @IBAction func actionAuthorizationButton(_ sender: UIButton) {
         
         guard (loginTextField.text?.isEmpty) != nil else { return }

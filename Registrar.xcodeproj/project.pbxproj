@@ -10,6 +10,7 @@
 		76AB159D29898A3400ABA0C9 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AB159C29898A3400ABA0C9 /* DataManager.swift */; };
 		76B1FE26298978430055B8D7 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B1FE25298978430055B8D7 /* Model.swift */; };
 		76F863AC298591BD00C621DE /* AddressTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F863AB298591BD00C621DE /* AddressTableViewController.swift */; };
+		8ABD727F298B985200F00841 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABD727E298B985200F00841 /* AboutViewController.swift */; };
 		A857113329857D89008322A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A857113229857D89008322A9 /* AppDelegate.swift */; };
 		A857113529857D89008322A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A857113429857D89008322A9 /* SceneDelegate.swift */; };
 		A857113729857D89008322A9 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A857113629857D89008322A9 /* AuthorizationViewController.swift */; };
@@ -31,6 +32,7 @@
 		76AB159C29898A3400ABA0C9 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		76B1FE25298978430055B8D7 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		76F863AB298591BD00C621DE /* AddressTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressTableViewController.swift; sourceTree = "<group>"; };
+		8ABD727E298B985200F00841 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		A857112F29857D89008322A9 /* Registrar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Registrar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A857113229857D89008322A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A857113429857D89008322A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				76F863AB298591BD00C621DE /* AddressTableViewController.swift */,
 				A886E82829899D7D00E15865 /* NewTicketViewController.swift */,
 				A886E8202988EE6F00E15865 /* MemberViewController.swift */,
+				8ABD727E298B985200F00841 /* AboutViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				76B1FE26298978430055B8D7 /* Model.swift in Sources */,
 				76AB159D29898A3400ABA0C9 /* DataManager.swift in Sources */,
 				A886E8212988EE6F00E15865 /* MemberViewController.swift in Sources */,
+				8ABD727F298B985200F00841 /* AboutViewController.swift in Sources */,
 				A886E82929899D7D00E15865 /* NewTicketViewController.swift in Sources */,
 				76F863AC298591BD00C621DE /* AddressTableViewController.swift in Sources */,
 				A857113729857D89008322A9 /* AuthorizationViewController.swift in Sources */,
