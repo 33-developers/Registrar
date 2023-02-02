@@ -11,25 +11,51 @@ class AddressTableViewController: UITableViewController {
     
     var person: Person!
     var tickets: [Ticket] = []
+
+    private let searchController = UISearchController(searchResultsController: nil)
+    
+    private var filteredTicket: [Ticket] = []
+    private var searchBarIsEmpty: Bool {
+        guard let text = searchController.searchBar.text else { return false }
+        return text.isEmpty
+    }
+    
+    private var isFiltering: Bool {
+        return searchController.isActive && !searchBarIsEmpty
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Заявки"
         
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Поиск"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
     }
+    
     
     @IBAction func addNewTicketButton(_ sender: Any) {
         alertAppendNewTicket()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        person.tickets.count
+        if isFiltering {
+            return filteredTicket.count
+        } else {
+            return person.tickets.count
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         var content = cell.defaultContentConfiguration()
-        content.text = person.tickets[indexPath.row].address
+        if isFiltering {
+            content.text = filteredTicket[indexPath.row].address
+        } else {
+            content.text = person.tickets[indexPath.row].address
+        }
         cell.contentConfiguration = content
         
         return cell
@@ -47,7 +73,13 @@ class AddressTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let index = tableView.indexPathForSelectedRow else { return }
         guard let ticketVC = segue.destination as? NewTicketViewController else { return }
-        ticketVC.ticket = person.tickets[index.row]
+        var ticket: Ticket
+        if isFiltering {
+            ticket = filteredTicket[index.row]
+        } else {
+            ticket = person.tickets[index.row]
+        }
+        ticketVC.ticket = ticket
     }
 }
 
@@ -69,4 +101,19 @@ extension AddressTableViewController {
         }
         present(alert, animated: true)
     }
+}
+
+extension AddressTableViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!)
+    }
+    
+    private func filterContentForSearchText(_ searchText: String) {
+        filteredTicket = person.tickets.filter({ (ticket: Ticket) -> Bool in
+            return ticket.address.lowercased().contains(searchText.lowercased())
+        })
+        tableView.reloadData()
+    }
+    
+    
 }
