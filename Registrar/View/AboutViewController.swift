@@ -31,8 +31,8 @@ class AboutViewController: UIViewController {
         labels[4].animation(typing: "Команда разработчиков:", duration: 0.07)
         labels[0].animation(typing: "TL: Солодянкин Игорь", duration: 0.05)
         labels[1].animation(typing: "Гурков Максим", duration: 0.05)
-        labels[2].animation(typing: "Айдар Оспанов", duration: 0.05)
-        labels[3].animation(typing: "Алексей Манохин", duration: 0.05)
+        labels[2].animation(typing: "Оспанов Айдар", duration: 0.05)
+        labels[3].animation(typing: "Манохин Алексей", duration: 0.05)
     }
 }
 
