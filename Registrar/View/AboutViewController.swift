@@ -31,11 +31,17 @@ class AboutViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        labels[4].animation(typing: "Команда разработчиков:", duration: 0.07)
-        labels[0].animation(typing: "TL: Солодянкин Игорь", duration: 0.05)
-        labels[1].animation(typing: "Гурков Максим", duration: 0.05)
-        labels[2].animation(typing: "Оспанов Айдар", duration: 0.05)
-        labels[3].animation(typing: "Манохин Алексей", duration: 0.05)
+        let irorSolodyankin = labels[0]
+        let gurkovMaxim = labels[1]
+        let ospanovAidar = labels[2]
+        let manohinAlexey = labels[3]
+        let header = labels[4]
+        
+        header.animation(typing: "Команда разработчиков:", duration: 0.07)
+        irorSolodyankin.animation(typing: "TL: Солодянкин Игорь", duration: 0.05)
+        gurkovMaxim.animation(typing: "Гурков Максим", duration: 0.05)
+        ospanovAidar.animation(typing: "Оспанов Айдар", duration: 0.05)
+        manohinAlexey.animation(typing: "Манохин Алексей", duration: 0.05)
     }
 }
 
