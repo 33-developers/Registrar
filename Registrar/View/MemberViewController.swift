@@ -30,7 +30,7 @@ class MemberViewController: UIViewController {
     }
     
     @IBAction func actionCheckPolicy(_ sender: UIButton) {
-        if serialDocument.text!.isEmpty && numberDocument.text!.isEmpty {
+        if serialDocument.text!.isEmpty || numberDocument.text!.isEmpty {
             checkPolicyValidity()
         }
     }
