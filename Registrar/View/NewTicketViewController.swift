@@ -28,12 +28,19 @@ class NewTicketViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         addressTextField.text = ticket.address
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(addButtonTapped))
     }
     
     // обновления таблицы при добавлении элементов
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
+    }
+    
+    @objc private func addButtonTapped() {
+        let option = OptionNewTicketContoller()
+        navigationController?.pushViewController(option, animated: true)
     }
     
 }
