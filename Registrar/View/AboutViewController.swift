@@ -20,9 +20,12 @@ class AboutViewController: UIViewController {
             label.text = ""
         }
         
-        UIView.animate(withDuration: 0.7, delay: 0.7, options: .curveEaseInOut, animations: {
-            self.logoImage.alpha = 1.0
-        }) { _ in }
+        UIView.animate(
+            withDuration: 0.7,
+            delay: 0.7,
+            options: .curveEaseInOut,
+            animations: { self.logoImage.alpha = 1.0 }
+        )
     }
     
     override func viewDidAppear(_ animated: Bool) {
