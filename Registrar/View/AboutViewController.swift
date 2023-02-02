@@ -21,8 +21,8 @@ class AboutViewController: UIViewController {
         }
         
         UIView.animate(
-            withDuration: 0.7,
-            delay: 0.7,
+            withDuration: 1,
+            delay: 1,
             options: .curveEaseInOut,
             animations: { self.logoImage.alpha = 1.0 }
         )
