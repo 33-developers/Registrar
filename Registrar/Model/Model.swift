@@ -4,7 +4,7 @@
 //
 //  Created by Максим Гурков on 31.01.2023.
 //
-
+import UIKit
 
 class Person {
     
@@ -84,4 +84,21 @@ struct Source {
     static func randomPhotos(with count: Int) -> [Photo] {
         return (0..<count).map { _ in allPhotos().randomElement()! }
     }
+}
+
+final class Developer {
+    let fullName: String
+    let role: String
+    let photo: UIImage
+    
+    init(fullName: String, role: String, photo: UIImage) {
+        self.fullName = fullName
+        self.role = role
+        self.photo = photo
+    }
+    
+    static func getMembers() -> [Developer] {
+        DataManager.shared.developers
+    }
+    
 }

@@ -9,47 +9,39 @@ import UIKit
 
 class AboutViewController: UIViewController {
     
-    @IBOutlet var labels: [UILabel]!
-    @IBOutlet var logoImage: UIImageView!
+    @IBOutlet var tableView: UITableView!
+    
+    var members = Developer.getMembers()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        logoImage.alpha = 0
+        tableView.delegate = self
+        tableView.dataSource = self
         
-        for label in labels {
-            label.text = ""
-        }
-        
-        UIView.animate(
-            withDuration: 1,
-            delay: 1,
-            options: .curveEaseInOut,
-            animations: { self.logoImage.alpha = 1.0 }
-        )
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        let irorSolodyankin = labels[0]
-        let gurkovMaxim = labels[1]
-        let ospanovAidar = labels[2]
-        let manohinAlexey = labels[3]
-        let header = labels[4]
-        
-        header.animation(typing: "Команда разработчиков:", duration: 0.07)
-        irorSolodyankin.animation(typing: "TL: Солодянкин Игорь", duration: 0.05)
-        gurkovMaxim.animation(typing: "Гурков Максим", duration: 0.05)
-        ospanovAidar.animation(typing: "Оспанов Айдар", duration: 0.05)
-        manohinAlexey.animation(typing: "Манохин Алексей", duration: 0.05)
-    }
+
 }
 
-extension UILabel {
-    func animation(typing value: String, duration: Double){
-        for char in value {
-            self.text?.append(char)
-            RunLoop.current.run(until: Date() + duration)
-        }
+extension AboutViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        members.count
     }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! DevelopersTableViewCell
+        let member = members[indexPath.row]
+        cell.getSet(member: member)
+
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.alpha = 0
+        UIView.animate(withDuration: 0.5, delay: 0.2 * Double(indexPath.row), options: .curveEaseIn, animations: { cell.alpha = 1 }, completion: nil)
+    }
+    
+    
+    
+    
 }
