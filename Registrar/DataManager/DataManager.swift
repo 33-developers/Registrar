@@ -4,6 +4,7 @@
 //
 //  Created by Максим Гурков on 31.01.2023.
 //
+import UIKit
 
 class DataManager {
     
@@ -135,10 +136,33 @@ class DataManager {
             )
         ]
     )
-                                  
+    
+    let developers = [
+        Developer(
+            fullName: "Игорь Солодянкин",
+            role: "Team Leader",
+            photo: UIImage(named: "igor") ?? UIImage()
+        ),
+        Developer(
+            fullName: "Алексей Манохин",
+            role: "Developer",
+            photo: UIImage(named: "alexey") ?? UIImage()
+        ),
+        Developer(
+            fullName: "Айдар Оспанов",
+            role: "Developer",
+            photo: UIImage(named: "aidar") ?? UIImage()
+        ),
+        Developer(
+            fullName: "Максим Гурков",
+            role: "Developer",
+            photo: UIImage(named: "maxim") ?? UIImage()
+        )
+    ]
     
     
     init() {}
     
     
 }
+
