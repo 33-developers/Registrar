@@ -28,6 +28,7 @@ class AddressTableViewController: UITableViewController {
         super.viewDidLoad()
         title = "Заявки"
         
+        // настройка строки поиска
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Поиск"
