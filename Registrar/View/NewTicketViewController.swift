@@ -9,7 +9,7 @@ import UIKit
 
 class NewTicketViewController: UIViewController {
     
-//    var person: Person!
+
     var ticket: Ticket!
     
     @IBOutlet weak var addressTextField: UITextField!
