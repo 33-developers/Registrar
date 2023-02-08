@@ -31,7 +31,8 @@ class MemberViewController: UIViewController {
     
     @IBAction func actionCheckPolicy(_ sender: UIButton) {
         if serialDocument.text!.isEmpty || numberDocument.text!.isEmpty {
-            checkPolicyValidity()
+            //checkPolicyValidity()
+            showAlert(withTitle: "Ошибка!", andMessage: "Заполните поля: серия и номер полиса.")
         }
     }
     
@@ -55,10 +56,10 @@ class MemberViewController: UIViewController {
     }
 }
 
-// переписать метод по лекции от 05/02/2023
+// всплывающее окно
 extension MemberViewController {
-    private func checkPolicyValidity() {
-        let alert = UIAlertController(title: "Ошибка!", message: "Заполните поля: серия и номер полиса", preferredStyle: .alert)
+    private func showAlert(withTitle title: String, andMessage message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default)
         alert.addAction(okAction)
         present(alert, animated: true)
