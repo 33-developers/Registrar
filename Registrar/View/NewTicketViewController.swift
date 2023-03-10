@@ -39,7 +39,7 @@ class NewTicketViewController: UIViewController {
     }
     
     @objc private func addButtonTapped() {
-        let option = OptionNewTicketContoller()
+        let option = OptionNewTicketController()
         navigationController?.pushViewController(option, animated: true)
     }
     

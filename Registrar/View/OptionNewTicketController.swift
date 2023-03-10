@@ -1,5 +1,5 @@
 //
-//  OptionNewTicketContoller.swift
+//  OptionNewTicketController.swift
 //  Registrar
 //
 //  Created by Айдар Оспанов on 02.02.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OptionNewTicketContoller: UIViewController {
+class OptionNewTicketController: UIViewController {
     
     let idOptionCell = "idOptionCell"
 
@@ -83,7 +83,7 @@ class OptionNewTicketContoller: UIViewController {
     }
 }
 
-extension OptionNewTicketContoller: UICollectionViewDataSource {
+extension OptionNewTicketController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         source.count
@@ -96,6 +96,6 @@ extension OptionNewTicketContoller: UICollectionViewDataSource {
     }
 }
 
-extension OptionNewTicketContoller: UICollectionViewDelegate {
+extension OptionNewTicketController: UICollectionViewDelegate {
     
 }
