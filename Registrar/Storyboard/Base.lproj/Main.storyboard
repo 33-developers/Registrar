@@ -296,7 +296,13 @@
                             <constraint firstItem="qXF-xv-Gdq" firstAttribute="leading" secondItem="4RB-w5-qtd" secondAttribute="leading" constant="20" id="xdP-Ou-Oos"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Qjb-7e-Q4r"/>
+                    <navigationItem key="navigationItem" id="Qjb-7e-Q4r">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="RUw-e2-WF0">
+                            <connections>
+                                <segue destination="AIf-Sn-WmV" kind="show" id="0Wh-r5-gVv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="addRequestButton" destination="qXF-xv-Gdq" id="boq-I7-348"/>
                         <outlet property="addressTextField" destination="RIk-LZ-84m" id="ONG-9Y-4ru"/>
@@ -462,6 +468,47 @@
             </objects>
             <point key="canvasLocation" x="3198" y="-559"/>
         </scene>
+        <!--Photo Table View Controller-->
+        <scene sceneID="jji-0x-kZx">
+            <objects>
+                <tableViewController id="AIf-Sn-WmV" customClass="PhotoTableViewController" customModule="Registrar" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="67J-5E-xQk">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="photoCell" rowHeight="279" id="2Hd-vL-Imm">
+                                <rect key="frame" x="0.0" y="50" width="430" height="279"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Hd-vL-Imm" id="jGU-sJ-CGB">
+                                    <rect key="frame" x="0.0" y="0.0" width="430" height="279"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Qx-6c-Ijk">
+                                            <rect key="frame" x="20" y="11" width="140" height="140"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2PH-YW-NKd">
+                                            <rect key="frame" x="270" y="11" width="140" height="140"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        </view>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="AIf-Sn-WmV" id="HuY-FQ-30y"/>
+                            <outlet property="delegate" destination="AIf-Sn-WmV" id="QcC-BB-N8A"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="4SP-DQ-ifT"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HiO-kj-c2L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1774.8837209302326" y="148.71244635193133"/>
+        </scene>
         <!--Address Table View Controller-->
         <scene sceneID="rS2-F7-Fsg">
             <objects>
@@ -529,6 +576,9 @@
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
