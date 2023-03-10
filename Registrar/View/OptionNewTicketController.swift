@@ -10,8 +10,10 @@ import UIKit
 class OptionNewTicketController: UIViewController {
     
     let idOptionCell = "idOptionCell"
-
-    let source: [Photo] = Source.randomPhotos(with: 15)
+    var photos: [Photo] = []
+    
+    let countCells = 2
+    let offset: CGFloat = 16
     
     var collectionView: UICollectionView!
     var collectionViewFlowLayout: UICollectionViewFlowLayout!
@@ -29,11 +31,10 @@ class OptionNewTicketController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Картинки"
+        title = "Фотографии с ДТП"
         view.backgroundColor = .white
-        
         setupViews()
-        setConstaints()
+        setConstraints()
         setDelegates()
         collectionView.register(OptionCollectionViewCell.self, forCellWithReuseIdentifier: idOptionCell)
     }
@@ -64,12 +65,12 @@ class OptionNewTicketController: UIViewController {
         
         let collectionViewLayout = UICollectionViewFlowLayout()
         collectionViewLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-        collectionViewLayout.minimumLineSpacing = 10
-        collectionViewLayout.sectionInset = .init(top: 30, left: 30, bottom: 30, right: 30)
+        collectionViewLayout.minimumLineSpacing = 20
+        collectionViewLayout.sectionInset = .init(top: 20, left: 20, bottom: 20, right: 20)
         return collectionViewLayout
     }
     
-    private func setConstaints() {
+    private func setConstraints() {
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             collectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
@@ -84,14 +85,14 @@ class OptionNewTicketController: UIViewController {
 }
 
 extension OptionNewTicketController: UICollectionViewDataSource {
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        source.count
+        photos.count
     }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: idOptionCell, for: indexPath) as? OptionCollectionViewCell else { return UICollectionViewCell() }
-        
-        cell.carImageView.image = UIImage(named: source[indexPath.item].imageName)
+        cell.layer.cornerRadius = 10
+        cell.carImageView.image = UIImage(named: photos[indexPath.item].imageName)
         return cell
     }
 }

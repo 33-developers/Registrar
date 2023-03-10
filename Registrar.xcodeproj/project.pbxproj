@@ -18,10 +18,7 @@
 		A857113A29857D89008322A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A857113829857D89008322A9 /* Main.storyboard */; };
 		A857113C29857D8A008322A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A857113B29857D8A008322A9 /* Assets.xcassets */; };
 		A857113F29857D8A008322A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A857113D29857D8A008322A9 /* LaunchScreen.storyboard */; };
-		A85A835B2986C45C0066040B /* avto3.png in Resources */ = {isa = PBXBuildFile; fileRef = A85A835A2986C45C0066040B /* avto3.png */; };
-		A85A835D2986C6E60066040B /* avto4.png in Resources */ = {isa = PBXBuildFile; fileRef = A85A835C2986C6E60066040B /* avto4.png */; };
 		A886E8212988EE6F00E15865 /* MemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A886E8202988EE6F00E15865 /* MemberViewController.swift */; };
-		A886E82329892BAD00E15865 /* Error.png in Resources */ = {isa = PBXBuildFile; fileRef = A886E82229892BAD00E15865 /* Error.png */; };
 		A886E82929899D7D00E15865 /* NewTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A886E82829899D7D00E15865 /* NewTicketViewController.swift */; };
 		EFE43BC9298BC8AC009BD4AA /* OptionNewTicketController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE43BC8298BC8AC009BD4AA /* OptionNewTicketController.swift */; };
 		EFE43BCC298BCDCB009BD4AA /* OptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE43BCB298BCDCB009BD4AA /* OptionCollectionViewCell.swift */; };
@@ -41,10 +38,7 @@
 		A857113B29857D8A008322A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A857113E29857D8A008322A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A857114029857D8A008322A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A85A835A2986C45C0066040B /* avto3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avto3.png; sourceTree = "<group>"; };
-		A85A835C2986C6E60066040B /* avto4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avto4.png; sourceTree = "<group>"; };
 		A886E8202988EE6F00E15865 /* MemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberViewController.swift; sourceTree = "<group>"; };
-		A886E82229892BAD00E15865 /* Error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Error.png; sourceTree = "<group>"; };
 		A886E82829899D7D00E15865 /* NewTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTicketViewController.swift; sourceTree = "<group>"; };
 		EFE43BC8298BC8AC009BD4AA /* OptionNewTicketController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionNewTicketController.swift; sourceTree = "<group>"; };
 		EFE43BCB298BCDCB009BD4AA /* OptionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -134,9 +128,6 @@
 			isa = PBXGroup;
 			children = (
 				A857113B29857D8A008322A9 /* Assets.xcassets */,
-				A85A835A2986C45C0066040B /* avto3.png */,
-				A85A835C2986C6E60066040B /* avto4.png */,
-				A886E82229892BAD00E15865 /* Error.png */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -217,12 +208,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A85A835B2986C45C0066040B /* avto3.png in Resources */,
 				A857113F29857D8A008322A9 /* LaunchScreen.storyboard in Resources */,
-				A85A835D2986C6E60066040B /* avto4.png in Resources */,
 				A857113C29857D8A008322A9 /* Assets.xcassets in Resources */,
 				A857113A29857D89008322A9 /* Main.storyboard in Resources */,
-				A886E82329892BAD00E15865 /* Error.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

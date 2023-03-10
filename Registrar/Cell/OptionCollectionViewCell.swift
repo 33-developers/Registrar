@@ -9,6 +9,14 @@ import UIKit
 
 class OptionCollectionViewCell: UICollectionViewCell {
     
+    let screenSize = UIScreen.main.bounds
+    let countCells = 2
+    let offset: CGFloat = 20
+    lazy var spacing = CGFloat(countCells + 1) * offset / CGFloat(countCells)
+    
+    lazy var cellWidth = screenSize.width / CGFloat(countCells) - spacing
+    lazy var cellHeight = cellWidth 
+    
     let carImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
@@ -30,12 +38,14 @@ class OptionCollectionViewCell: UICollectionViewCell {
     
     private func setupViews() {
         contentView.addSubview(carImageView)
+        print(cellWidth)
     }
     
     private func setConstraints() {
         NSLayoutConstraint.activate([
-            carImageView.heightAnchor.constraint(equalToConstant: 150),
-            carImageView.widthAnchor.constraint(equalToConstant: 150),
+            carImageView.heightAnchor.constraint(equalToConstant: cellHeight),
+//            carImageView.widthAnchor.constraint(equalToConstant: 150),
+            carImageView.widthAnchor.constraint(equalToConstant: cellWidth),
             
             carImageView.topAnchor.constraint(equalTo: contentView.topAnchor),
             carImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),

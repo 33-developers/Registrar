@@ -97,7 +97,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7Fn-rW-VBF"/>
-                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="pxB-Od-TTh" firstAttribute="height" secondItem="vgx-Az-Zf0" secondAttribute="height" multiplier="0.225352" id="4y7-Wr-i8K"/>
                             <constraint firstItem="7Fn-rW-VBF" firstAttribute="trailing" secondItem="vXn-NB-wed" secondAttribute="trailing" constant="16" id="6Fh-OM-1XL"/>
@@ -174,7 +174,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avto4.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ght-PV-olC">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avto4" translatesAutoresizingMaskIntoConstraints="NO" id="Ght-PV-olC">
                                 <rect key="frame" x="73" y="155" width="284" height="186.33333333333337"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tO8-Ns-l4D">
@@ -423,7 +423,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="863"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Error.png" translatesAutoresizingMaskIntoConstraints="NO" id="HK4-Jb-hnB">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Error" translatesAutoresizingMaskIntoConstraints="NO" id="HK4-Jb-hnB">
                                 <rect key="frame" x="23" y="108.99999999999997" width="384" height="299.33333333333326"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HYw-7I-Xex">
@@ -521,8 +521,8 @@
     </scenes>
     <resources>
         <image name="33devs" width="2362" height="2362"/>
-        <image name="Error.png" width="404.39999389648438" height="442.32000732421875"/>
-        <image name="avto4.png" width="700.32000732421875" height="441.60000610351562"/>
+        <image name="Error" width="1685" height="1843"/>
+        <image name="avto4" width="2918" height="1840"/>
         <image name="info.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

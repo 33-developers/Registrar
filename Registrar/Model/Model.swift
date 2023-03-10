@@ -29,11 +29,13 @@ class Ticket {
     let status: String
     let ticketСreated = false
     var members: [Member]
+    var photo: [Photo]
     
-    init(address: String, status: String, members: [Member]) {
+    init(address: String, status: String, members: [Member], photo: [Photo]) {
         self.address = address
         self.status = status
         self.members = members
+        self.photo = photo
     }
 }
 
@@ -60,31 +62,10 @@ class Member {
 
 
 struct Photo {
-    let number: Int
     let imageName: String
 }
 
-struct Source {
-    
-    static func allPhotos() -> [Photo] {
-        [
-            .init(number: 1, imageName: "joker"),
-            .init(number: 2, imageName: "background"),
-            .init(number: 3, imageName: "batman"),
-            .init(number: 4, imageName: "doctor-strange"),
-            .init(number: 5, imageName: "iron-man"),
-            .init(number: 6, imageName: "jinx"),
-            .init(number: 7, imageName: "moon-knight"),
-            .init(number: 8, imageName: "sunset"),
-            .init(number: 9, imageName: "superman"),
-            .init(number: 10, imageName: "venom"),
-        ]
-    }
-    
-    static func randomPhotos(with count: Int) -> [Photo] {
-        return (0..<count).map { _ in allPhotos().randomElement()! }
-    }
-}
+
 
 final class Developer {
     let fullName: String

@@ -40,8 +40,6 @@ class AuthorizationViewController: UIViewController {
             print("No")
             return
         }
-        
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

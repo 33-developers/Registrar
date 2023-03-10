@@ -8,8 +8,6 @@
 import UIKit
 
 class NewTicketViewController: UIViewController {
-    
-
     var ticket: Ticket!
     
     @IBOutlet weak var addressTextField: UITextField!
@@ -40,6 +38,7 @@ class NewTicketViewController: UIViewController {
     
     @objc private func addButtonTapped() {
         let option = OptionNewTicketController()
+        option.photos = ticket.photo
         navigationController?.pushViewController(option, animated: true)
     }
     
@@ -62,12 +61,12 @@ extension NewTicketViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     // анимация появления ячеек
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.alpha = 0
-        UIView.animate(withDuration: 0.5, delay: 0.1 * Double(indexPath.row), options: .curveEaseInOut, animations: {
-        cell.alpha = 1
-        })
-    }
+//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//        cell.alpha = 0
+//        UIView.animate(withDuration: 0.5, delay: 0.1 * Double(indexPath.row), options: .curveEaseInOut, animations: {
+//        cell.alpha = 1
+//        })
+//    }
     
     // переход на экран участников
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
