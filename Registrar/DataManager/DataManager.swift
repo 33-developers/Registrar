@@ -15,13 +15,13 @@ class DataManager {
         password: "1111",
         tickets: [
             Ticket(
-                address: "Чичерина 44",
+                address: "Блюхера 63",
                 status: "Закрыта",
                 members: [
                     Member(
                         fullName: "Иванов Иван Иванович",
-                        nameCar: "Опель",
-                        modelCar: "Астра",
+                        nameCar: "Фольксваген",
+                        modelCar: "Сантана",
                         gosNumber: "T010TT174",
                         companyName: "Тинькоф",
                         serialDocument: "XXX",
@@ -29,23 +29,43 @@ class DataManager {
                     ),
                     Member(
                         fullName: "Серов Илья Петрович",
-                        nameCar: "Форд",
-                        modelCar: "Фокус",
+                        nameCar: "Ваз",
+                        modelCar: "21014",
                         gosNumber: "В716КВ96",
                         companyName: "АльфаСтрахование",
                         serialDocument: "TTT",
                         numberDocument: "7195736588"
                     )
+                ], photo: [
+                    Photo(imageName: "Блюхера 63 1"),
+                    Photo(imageName: "Блюхера 63 2"),
+                    Photo(imageName: "Блюхера 63 3"),
+                    Photo(imageName: "Блюхера 63 4"),
+                    Photo(imageName: "Блюхера 63 5"),
+                    Photo(imageName: "Блюхера 63 6"),
+                    Photo(imageName: "Блюхера 63 7"),
+                    Photo(imageName: "Блюхера 63 8"),
+                    Photo(imageName: "Блюхера 63 9"),
+                    Photo(imageName: "Блюхера 63 10"),
+                    Photo(imageName: "Блюхера 63 11"),
+                    Photo(imageName: "Блюхера 63 12"),
+                    Photo(imageName: "Блюхера 63 13"),
+                    Photo(imageName: "Блюхера 63 14"),
+                    Photo(imageName: "Блюхера 63 15"),
+                    Photo(imageName: "Блюхера 63 16"),
+                    Photo(imageName: "Блюхера 63 17"),
+                    Photo(imageName: "Блюхера 63 18"),
+                    Photo(imageName: "Блюхера 63 19")
                 ]
             ),
             Ticket(
-                address: "250 лет Челябинска - Чичерина",
-                status: "В работе",
+                address: "Блюхера-Дарвина",
+                status: "Закрыта",
                 members: [
                     Member(
                         fullName: "Лис Владислав Владимирович",
-                        nameCar: "БМВ",
-                        modelCar: "х6",
+                        nameCar: "Лада",
+                        modelCar: "Гранта",
                         gosNumber: "С711ОТ66",
                         companyName: "Югория",
                         serialDocument: "XXX",
@@ -53,8 +73,8 @@ class DataManager {
                     ),
                     Member(
                         fullName: "Спицин Валерий Геннадьевич",
-                        nameCar: "Рено",
-                        modelCar: "Дастер",
+                        nameCar: "Митсубиси",
+                        modelCar: "Лансер",
                         gosNumber: "М066АВ74",
                         companyName: "АльфаСтрахование",
                         serialDocument: "ААА",
@@ -69,31 +89,37 @@ class DataManager {
                         serialDocument: "РРР",
                         numberDocument: "1937789351"
                     )
+                ], photo: [
+                    Photo(imageName: "Блюхера-Дарвина 1"),
+                    Photo(imageName: "Блюхера-Дарвина 2"),
+                    Photo(imageName: "Блюхера-Дарвина 3"),
+                    Photo(imageName: "Блюхера-Дарвина 4"),
+                    Photo(imageName: "Блюхера-Дарвина 5"),
+                    Photo(imageName: "Блюхера-Дарвина 6"),
+                    Photo(imageName: "Блюхера-Дарвина 7"),
+                    Photo(imageName: "Блюхера-Дарвина 8"),
+                    Photo(imageName: "Блюхера-Дарвина 9"),
+                    Photo(imageName: "Блюхера-Дарвина 10"),
+                    Photo(imageName: "Блюхера-Дарвина 11"),
+                    Photo(imageName: "Блюхера-Дарвина 12"),
+                    Photo(imageName: "Блюхера-Дарвина 13"),
+                    Photo(imageName: "Блюхера-Дарвина 14"),
+                    Photo(imageName: "Блюхера-Дарвина 15"),
+                    Photo(imageName: "Блюхера-Дарвина 16"),
+                    Photo(imageName: "Блюхера-Дарвина 17"),
+                    Photo(imageName: "Блюхера-Дарвина 18"),
+                    Photo(imageName: "Блюхера-Дарвина 19"),
+                    Photo(imageName: "Блюхера-Дарвина 20")
                 ]
             ),
             Ticket(
-                address: "пр. Ленина 17",
-                status: "Не принята",
-                members: [
-                    Member(
-                        fullName: "Ваймер Игорь Дмитриевич",
-                        nameCar: "Шкода",
-                        modelCar: "Актавия",
-                        gosNumber: "А645ОО23",
-                        companyName: "Ингосстрах",
-                        serialDocument: "МММ",
-                        numberDocument: "2460946587"
-                    )
-                ]
-            ),
-            Ticket(
-                address: "ул. Вагнера 64",
-                status: "Не принята",
+                address: "Блюхера-Доватора",
+                status: "В работе",
                 members: [
                     Member(
                         fullName: "Янушкин Максим Семёнович",
-                        nameCar: "Шкода",
-                        modelCar: "Актавия",
+                        nameCar: "Киа",
+                        modelCar: "Пиканто",
                         gosNumber: "Р736ОН74",
                         companyName: "Ингосстрах",
                         serialDocument: "МММ",
@@ -101,13 +127,23 @@ class DataManager {
                     ),
                     Member(
                         fullName: "Cветашкина Инна Сергеевна",
-                        nameCar: "Шкода",
-                        modelCar: "Актавия",
+                        nameCar: "Субару",
+                        modelCar: "s20",
                         gosNumber: "О100ОО174",
                         companyName: "Зетта",
                         serialDocument: "МММ",
                         numberDocument: "9456628777"
                     )
+                ], photo: [
+                    Photo(imageName: "Блюхера-Доватора 1"),
+                    Photo(imageName: "Блюхера-Доватора 2"),
+                    Photo(imageName: "Блюхера-Доватора 3"),
+                    Photo(imageName: "Блюхера-Доватора 4"),
+                    Photo(imageName: "Блюхера-Доватора 5"),
+                    Photo(imageName: "Блюхера-Доватора 6"),
+                    Photo(imageName: "Блюхера-Доватора 7"),
+                    Photo(imageName: "Блюхера-Доватора 8"),
+                    Photo(imageName: "Блюхера-Доватора 9")
                 ]
             ),
             Ticket(
@@ -132,6 +168,8 @@ class DataManager {
                         serialDocument: "ЕЕЕ",
                         numberDocument: "8567987893"
                     )
+                ], photo: [
+                    Photo(imageName: "")
                 ]
             )
         ]

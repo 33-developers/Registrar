@@ -35,13 +35,11 @@ class AuthorizationViewController: UIViewController {
         if person.login == loginTextField.text && person.password == passwordTextField.text {
 //            let next = self.storyboard?.instantiateViewController(withIdentifier: "address") as! AddressTableViewController
 //            self.present(next, animated: true, completion: nil)
-            print("OK")
+            print("Ok")
         } else {
-            print("no")
+            print("No")
             return
         }
-        
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -52,6 +50,6 @@ class AuthorizationViewController: UIViewController {
     
 }
 
-// добавить модель на авторизации лоигнёпароль
+// добавить модель на авторизацию логин\пароль
 // добавить скрытие клавиатуры по тапу
 // добавить очистку логина если не верно введено (задание 2.6)
