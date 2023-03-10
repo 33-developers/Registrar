@@ -297,7 +297,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Qjb-7e-Q4r">
-                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="RUw-e2-WF0">
+                        <barButtonItem key="rightBarButtonItem" title="Фотографии" id="RUw-e2-WF0">
                             <connections>
                                 <segue destination="AIf-Sn-WmV" kind="show" id="0Wh-r5-gVv"/>
                             </connections>
@@ -468,7 +468,7 @@
             </objects>
             <point key="canvasLocation" x="3198" y="-559"/>
         </scene>
-        <!--Photo Table View Controller-->
+        <!--Фотографии с ДТП-->
         <scene sceneID="jji-0x-kZx">
             <objects>
                 <tableViewController id="AIf-Sn-WmV" customClass="PhotoTableViewController" customModule="Registrar" customModuleProvider="target" sceneMemberID="viewController">
@@ -477,25 +477,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="photoCell" rowHeight="279" id="2Hd-vL-Imm">
-                                <rect key="frame" x="0.0" y="50" width="430" height="279"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="photoCell" rowHeight="202" id="2Hd-vL-Imm">
+                                <rect key="frame" x="0.0" y="50" width="430" height="202"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Hd-vL-Imm" id="jGU-sJ-CGB">
-                                    <rect key="frame" x="0.0" y="0.0" width="430" height="279"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="430" height="202"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Qx-6c-Ijk">
-                                            <rect key="frame" x="20" y="11" width="140" height="140"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                        </view>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2PH-YW-NKd">
-                                            <rect key="frame" x="270" y="11" width="140" height="140"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                        </view>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="5eQ-UM-OOs">
+                                            <rect key="frame" x="30" y="16" width="370" height="170"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Qx-6c-Ijk">
+                                                    <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+                                                    <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="3Qx-6c-Ijk" secondAttribute="height" multiplier="1:1" id="379-hD-fvl"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2PH-YW-NKd">
+                                                    <rect key="frame" x="200" y="0.0" width="170" height="170"/>
+                                                    <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="2PH-YW-NKd" secondAttribute="height" multiplier="1:1" id="frs-RF-m0X"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="5eQ-UM-OOs" secondAttribute="bottom" constant="5" id="ZGa-K7-u9q"/>
+                                        <constraint firstItem="5eQ-UM-OOs" firstAttribute="leading" secondItem="jGU-sJ-CGB" secondAttribute="leadingMargin" constant="10" id="pcR-Jx-I9l"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="5eQ-UM-OOs" secondAttribute="trailing" constant="10" id="vSZ-UA-FHc"/>
+                                        <constraint firstItem="5eQ-UM-OOs" firstAttribute="top" secondItem="jGU-sJ-CGB" secondAttribute="topMargin" constant="5" id="wF9-bu-Sb8"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <inset key="separatorInset" minX="1000" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -503,7 +519,9 @@
                             <outlet property="delegate" destination="AIf-Sn-WmV" id="QcC-BB-N8A"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="4SP-DQ-ifT"/>
+                    <navigationItem key="navigationItem" title="Фотографии с ДТП" id="4SP-DQ-ifT">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="9Ac-Gi-cK8"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HiO-kj-c2L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
