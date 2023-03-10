@@ -27,7 +27,7 @@ class NewTicketViewController: UIViewController {
         tableView.dataSource = self
         addressTextField.text = ticket.address
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(addButtonTapped))
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(addButtonTapped))
     }
     
     // обновления таблицы при добавлении элементов
@@ -36,11 +36,11 @@ class NewTicketViewController: UIViewController {
         tableView.reloadData()
     }
     
-    @objc private func addButtonTapped() {
-        let option = OptionNewTicketController()
-        option.photos = ticket.photo
-        navigationController?.pushViewController(option, animated: true)
-    }
+//    @objc private func addButtonTapped() {
+//        let option = OptionNewTicketController()
+//        option.photos = ticket.photo
+//        navigationController?.pushViewController(option, animated: true)
+//    }
     
 }
 
