@@ -11,16 +11,13 @@ class OptionNewTicketController: UIViewController {
     
     let idOptionCell = "idOptionCell"
     var photos: [Photo] = []
-    
-    let countCells = 2
-    let offset: CGFloat = 16
-    
+
     var collectionView: UICollectionView!
     var collectionViewFlowLayout: UICollectionViewFlowLayout!
     
     lazy var changeButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Change", for: .normal)
+        button.setTitle("Добавить фото", for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.layer.borderWidth = 1
         button.layer.cornerRadius = 10
