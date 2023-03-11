@@ -18,9 +18,7 @@ final class AboutViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        
     }
-    
 }
 
 extension AboutViewController: UITableViewDelegate, UITableViewDataSource {
@@ -44,5 +42,4 @@ extension AboutViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
 }
