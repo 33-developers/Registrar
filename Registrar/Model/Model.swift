@@ -29,13 +29,13 @@ class Ticket {
     let status: String
     let ticketСreated = false
     var members: [Member]
-    var photo: [Photo]
+    var photos: [Photo]
     
     init(address: String, status: String, members: [Member], photo: [Photo]) {
         self.address = address
         self.status = status
         self.members = members
-        self.photo = photo
+        self.photos = photo
     }
 }
 
