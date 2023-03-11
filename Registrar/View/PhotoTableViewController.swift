@@ -34,13 +34,13 @@ class PhotoTableViewController: UITableViewController {
 //        3
 //    }
     
-//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        switch section {
-//        case 0: return "Блюхера"
-//        case 1: return "Блюхера-Дарвина"
-//        default: return "Блюхера-Доватора"
-//        }
-//    }
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0: return "Блюхера 63"
+        case 1: return "Блюхера-Дарвина"
+        default: return "Блюхера-Доватора"
+        }
+    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
@@ -58,7 +58,6 @@ class PhotoTableViewController: UITableViewController {
 //        let photo = person.tickets[indexPath.section].photo[indexPath.row].imageName
 //        let photoValue = person.tickets[indexPath.section].photo.count
         
-        
         let evenIndex = indexPath.row * 2
         let oddIndex = evenIndex + 1
 
@@ -73,9 +72,6 @@ class PhotoTableViewController: UITableViewController {
                 cell.photoTwo.image = oddImage
             }
         }
-
-        
-        
         return cell
     }
 }

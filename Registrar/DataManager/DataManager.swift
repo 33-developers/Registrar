@@ -47,15 +47,15 @@ class DataManager {
                     Photo(imageName: "Блюхера 63 8"),
                     Photo(imageName: "Блюхера 63 9"),
                     Photo(imageName: "Блюхера 63 10"),
-//                    Photo(imageName: "Блюхера 63 11"),
-//                    Photo(imageName: "Блюхера 63 12"),
-//                    Photo(imageName: "Блюхера 63 13"),
-//                    Photo(imageName: "Блюхера 63 14"),
-//                    Photo(imageName: "Блюхера 63 15"),
-//                    Photo(imageName: "Блюхера 63 16"),
-//                    Photo(imageName: "Блюхера 63 17"),
-//                    Photo(imageName: "Блюхера 63 18"),
-//                    Photo(imageName: "Блюхера 63 19")
+                    Photo(imageName: "Блюхера 63 11"),
+                    Photo(imageName: "Блюхера 63 12"),
+                    Photo(imageName: "Блюхера 63 13"),
+                    Photo(imageName: "Блюхера 63 14"),
+                    Photo(imageName: "Блюхера 63 15"),
+                    Photo(imageName: "Блюхера 63 16"),
+                    Photo(imageName: "Блюхера 63 17"),
+                    Photo(imageName: "Блюхера 63 18"),
+                    Photo(imageName: "Блюхера 63 19")
                 ]
             ),
             Ticket(
@@ -99,17 +99,17 @@ class DataManager {
                     Photo(imageName: "Блюхера-Дарвина 7"),
                     Photo(imageName: "Блюхера-Дарвина 8"),
                     Photo(imageName: "Блюхера-Дарвина 9"),
-                    Photo(imageName: "Блюхера-Дарвина 10"),
-                    Photo(imageName: "Блюхера-Дарвина 11"),
-                    Photo(imageName: "Блюхера-Дарвина 12"),
-                    Photo(imageName: "Блюхера-Дарвина 13"),
-                    Photo(imageName: "Блюхера-Дарвина 14"),
-                    Photo(imageName: "Блюхера-Дарвина 15"),
-                    Photo(imageName: "Блюхера-Дарвина 16"),
-                    Photo(imageName: "Блюхера-Дарвина 17"),
-                    Photo(imageName: "Блюхера-Дарвина 18"),
-                    Photo(imageName: "Блюхера-Дарвина 19"),
-                    Photo(imageName: "Блюхера-Дарвина 20")
+//                    Photo(imageName: "Блюхера-Дарвина 10"),
+//                    Photo(imageName: "Блюхера-Дарвина 11"),
+//                    Photo(imageName: "Блюхера-Дарвина 12"),
+//                    Photo(imageName: "Блюхера-Дарвина 13"),
+//                    Photo(imageName: "Блюхера-Дарвина 14"),
+//                    Photo(imageName: "Блюхера-Дарвина 15"),
+//                    Photo(imageName: "Блюхера-Дарвина 16"),
+//                    Photo(imageName: "Блюхера-Дарвина 17"),
+//                    Photo(imageName: "Блюхера-Дарвина 18"),
+//                    Photo(imageName: "Блюхера-Дарвина 19"),
+//                    Photo(imageName: "Блюхера-Дарвина 20")
                 ]
             ),
             Ticket(
