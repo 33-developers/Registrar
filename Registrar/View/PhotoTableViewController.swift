@@ -55,19 +55,28 @@ class PhotoTableViewController: UITableViewController {
            return UITableViewCell()
         }
         
-        let photo = person.tickets[indexPath.section].photo[indexPath.row].imageName
+//        let photo = person.tickets[indexPath.section].photo[indexPath.row].imageName
         let photoValue = person.tickets[indexPath.section].photo.count
-        print(photoValue)
-        for photo in 0...photoValue {
-            if photo % 2 == 0 {
-                print(photo)
-                cell.photoOne.image = UIImage(named: "\(photo)")
-            } else {
-                cell.photoTwo.image = UIImage(named: "\(photo)")
-                
-            }
+//        for currentPhoto in 0...photoValue {
+//            if currentPhoto % 2 == 0 {
+//                print(currentPhoto)
+//                cell.photoOne.image = UIImage(named: "\(photo)")
+//            } else {
+//                cell.photoTwo.image = UIImage(named: "\(photo)")
+//
+//            }
+//        }
+        
+        let evenIndex = indexPath.row * 2
+        let oddIndex = evenIndex + 1
+        
+        if let evenImage = UIImage(named: person.tickets[indexPath.section].photo[evenIndex].imageName) {
+            cell.photoOne.image = evenImage
         }
-//        cell.getSet(photo: photo, value: indexPath.row)
+        
+        if let oddImage = UIImage(named: person.tickets[indexPath.section].photo[oddIndex].imageName) {
+            cell.photoTwo.image = oddImage
+        }
         return cell
     }
 }

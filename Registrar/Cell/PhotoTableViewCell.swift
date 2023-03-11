@@ -34,11 +34,11 @@ class PhotoTableViewCell: UITableViewCell {
         super.init(coder: coder)
     }
     
-//    func getSet(photo: String, value: Int) {
-//        if value % 2 == 0 {
-//            photoOne.image = UIImage(named: photo)
-//        } else {
-//            photoTwo.image = UIImage(named: photo)
-//        }
-//    }
+    func getSet(photo: String, value: Int) {
+        if value % 2 == 0 {
+            photoOne.image = UIImage(named: photo)
+        } else {
+            photoTwo.image = UIImage(named: photo)
+        }
+    }
 }
