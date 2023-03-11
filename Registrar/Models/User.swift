@@ -6,7 +6,7 @@
 //
 import UIKit
 
-class Person {
+class User {
     
     let login: String
     let password: String
@@ -18,7 +18,7 @@ class Person {
         self.tickets = tickets
     }
     
-    static func newPerson() -> Person {
-        DataManager.shared.person
+    static func newUser() -> User {
+        DataManager.shared.user
     }
 }
