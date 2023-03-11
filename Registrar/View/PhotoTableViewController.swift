@@ -30,17 +30,17 @@ class PhotoTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        3
-//    }
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        3
+    }
     
-//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        switch section {
-//        case 0: return "Блюхера"
-//        case 1: return "Блюхера-Дарвина"
-//        default: return "Блюхера-Доватора"
-//        }
-//    }
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0: return "Блюхера"
+        case 1: return "Блюхера-Дарвина"
+        default: return "Блюхера-Доватора"
+        }
+    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
@@ -56,18 +56,8 @@ class PhotoTableViewController: UITableViewController {
         }
         
         let photo = person.tickets[indexPath.section].photo[indexPath.row].imageName
-        let photoValue = person.tickets[indexPath.section].photo.count
-        print(photoValue)
-        for photo in 0...photoValue {
-            if photo % 2 == 0 {
-                print(photo)
-                cell.photoOne.image = UIImage(named: "\(photo)")
-            } else {
-                cell.photoTwo.image = UIImage(named: "\(photo)")
-                
-            }
-        }
-//        cell.getSet(photo: photo, value: indexPath.row)
+
+        cell.getSet(photo: photo, value: indexPath.row)
         return cell
     }
 }
