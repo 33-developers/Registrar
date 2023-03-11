@@ -18,7 +18,8 @@ class PhotoTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableView.estimatedRowHeight = 100
+        view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -42,7 +43,11 @@ class PhotoTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        person.tickets[section].photo.count
+        switch section {
+        case 0: return  person.tickets[section].photo.count
+        case 1: return  person.tickets[section].photo.count
+        default: return person.tickets[section].photo.count
+        }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -51,6 +56,8 @@ class PhotoTableViewController: UITableViewController {
         }
         
         let photo = person.tickets[indexPath.section].photo[indexPath.row].imageName
+        //let photoValue = person.tickets[indexPath.section].photo.count
+        
         cell.getSet(photo: photo, value: indexPath.row)
         return cell
     }

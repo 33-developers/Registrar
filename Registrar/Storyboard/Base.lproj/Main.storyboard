@@ -490,12 +490,9 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Qx-6c-Ijk">
                                                     <rect key="frame" x="0.0" y="0.0" width="162" height="170"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ekP-HP-vJJ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="166" height="170"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="165" id="HG8-Su-7gp"/>
-                                                                <constraint firstAttribute="width" constant="165" id="fK5-Oq-CiO"/>
-                                                            </constraints>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ekP-HP-vJJ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="162" height="170"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemYellowColor"/>
