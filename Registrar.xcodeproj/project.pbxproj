@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		76AB159D29898A3400ABA0C9 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AB159C29898A3400ABA0C9 /* DataManager.swift */; };
-		76B1FE26298978430055B8D7 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B1FE25298978430055B8D7 /* Model.swift */; };
+		76B1FE26298978430055B8D7 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B1FE25298978430055B8D7 /* Person.swift */; };
 		76F863AC298591BD00C621DE /* AddressTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F863AB298591BD00C621DE /* AddressTableViewController.swift */; };
+		8A6BF61B29BD1B95009514E0 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6BF61A29BD1B95009514E0 /* Member.swift */; };
+		8A6BF61D29BD1D12009514E0 /* TIcket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6BF61C29BD1D12009514E0 /* TIcket.swift */; };
+		8A6BF61F29BD1ECB009514E0 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6BF61E29BD1ECB009514E0 /* Photo.swift */; };
+		8A6BF62129BD1EF3009514E0 /* Developer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6BF62029BD1EF3009514E0 /* Developer.swift */; };
 		8ABD727F298B985200F00841 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABD727E298B985200F00841 /* AboutViewController.swift */; };
 		8AD81A832993D2BC0057D128 /* DevelopersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD81A822993D2BC0057D128 /* DevelopersTableViewCell.swift */; };
 		A857113329857D89008322A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A857113229857D89008322A9 /* AppDelegate.swift */; };
@@ -29,8 +33,12 @@
 
 /* Begin PBXFileReference section */
 		76AB159C29898A3400ABA0C9 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		76B1FE25298978430055B8D7 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		76B1FE25298978430055B8D7 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		76F863AB298591BD00C621DE /* AddressTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressTableViewController.swift; sourceTree = "<group>"; };
+		8A6BF61A29BD1B95009514E0 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		8A6BF61C29BD1D12009514E0 /* TIcket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIcket.swift; sourceTree = "<group>"; };
+		8A6BF61E29BD1ECB009514E0 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		8A6BF62029BD1EF3009514E0 /* Developer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Developer.swift; sourceTree = "<group>"; };
 		8ABD727E298B985200F00841 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		8AD81A822993D2BC0057D128 /* DevelopersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopersTableViewCell.swift; sourceTree = "<group>"; };
 		A857112F29857D89008322A9 /* Registrar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Registrar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,12 +77,16 @@
 			path = DataManager;
 			sourceTree = "<group>";
 		};
-		76B1FE27298978480055B8D7 /* Model */ = {
+		76B1FE27298978480055B8D7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				76B1FE25298978430055B8D7 /* Model.swift */,
+				76B1FE25298978430055B8D7 /* Person.swift */,
+				8A6BF62029BD1EF3009514E0 /* Developer.swift */,
+				8A6BF61E29BD1ECB009514E0 /* Photo.swift */,
+				8A6BF61C29BD1D12009514E0 /* TIcket.swift */,
+				8A6BF61A29BD1B95009514E0 /* Member.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		A857112629857D89008322A9 = {
@@ -102,7 +114,7 @@
 				A857114B29857EE0008322A9 /* View */,
 				A857114D29857EF9008322A9 /* Storyboard */,
 				A857114C29857EF1008322A9 /* Assets */,
-				76B1FE27298978480055B8D7 /* Model */,
+				76B1FE27298978480055B8D7 /* Models */,
 			);
 			path = Registrar;
 			sourceTree = "<group>";
@@ -231,15 +243,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFE43BCC298BCDCB009BD4AA /* OptionCollectionViewCell.swift in Sources */,
-				76B1FE26298978430055B8D7 /* Model.swift in Sources */,
+				8A6BF62129BD1EF3009514E0 /* Developer.swift in Sources */,
+				8A6BF61D29BD1D12009514E0 /* TIcket.swift in Sources */,
+				76B1FE26298978430055B8D7 /* Person.swift in Sources */,
 				76AB159D29898A3400ABA0C9 /* DataManager.swift in Sources */,
 				A886E8212988EE6F00E15865 /* MemberViewController.swift in Sources */,
+				8A6BF61B29BD1B95009514E0 /* Member.swift in Sources */,
 				8ABD727F298B985200F00841 /* AboutViewController.swift in Sources */,
 				EF6E01FE29BC47F70007B14E /* PhotoTableViewCell.swift in Sources */,
 				A886E82929899D7D00E15865 /* NewTicketViewController.swift in Sources */,
 				76F863AC298591BD00C621DE /* AddressTableViewController.swift in Sources */,
 				A8F9E86729BC2E2E00CD9992 /* InfoPhotoViewController.swift in Sources */,
 				EFE43BC9298BC8AC009BD4AA /* OptionNewTicketController.swift in Sources */,
+				8A6BF61F29BD1ECB009514E0 /* Photo.swift in Sources */,
 				8AD81A832993D2BC0057D128 /* DevelopersTableViewCell.swift in Sources */,
 				A857113729857D89008322A9 /* AuthorizationViewController.swift in Sources */,
 				A857113329857D89008322A9 /* AppDelegate.swift in Sources */,

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AuthorizationViewController: UIViewController {
+final class AuthorizationViewController: UIViewController {
     
     var person = Person.newPerson()
 
