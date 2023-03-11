@@ -9,13 +9,14 @@ import UIKit
 
 class InfoPhotoViewController: UIViewController {
     
-    @IBOutlet var artImageView: UIImageView!
+    @IBOutlet var photoImageView: UIImageView!
     
-    var photo: Photo!
+    var photos: [Photo]!
+    var index: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        artImageView.image = UIImage(named: photo.imageName)
+//        photoImageView.image = UIImage(named: photos[index].imageName)
     }
 }

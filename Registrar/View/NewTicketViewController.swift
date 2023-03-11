@@ -77,7 +77,6 @@ extension NewTicketViewController: UITableViewDelegate, UITableViewDataSource {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let questionVC = segue.destination as? PhotoTableViewController else { return }
         questionVC.ticket = ticket
-//        questionVC.index = index.row
     }
 }
 

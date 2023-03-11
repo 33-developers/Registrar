@@ -67,15 +67,25 @@ class PhotoTableViewController: UITableViewController {
 
         if (evenIndex < ticket.photos.count) {
             if let evenImage = UIImage(named: ticket.photos[evenIndex].imageName) {
-                cell.photoOne.image = evenImage
+//                cell.firstPhotoButton.imageView?.image = evenImage
+                cell.firstPhotoButton.setBackgroundImage(evenImage, for: .normal)
             }
         }
 
         if (oddIndex < ticket.photos.count) {
             if let oddImage = UIImage(named: ticket.photos[oddIndex].imageName) {
-                cell.photoTwo.image = oddImage
+                cell.secondPhotoButton.setBackgroundImage(oddImage, for: .normal)
             }
         }
         return cell
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard let index = tableView.indexPathForSelectedRow else { return }
+//        guard let infoPhotoVC = segue.destination as? InfoPhotoViewController else { return }
+//        if segue.identifier == "photoOne" {
+//            infoPhotoVC.photos = ticket.photos[index.row].imageName
+//            infoPhotoVC.index = index.row
+//        }
+//    }
 }
