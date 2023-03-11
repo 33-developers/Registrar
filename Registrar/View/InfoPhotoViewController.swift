@@ -8,10 +8,14 @@
 import UIKit
 
 class InfoPhotoViewController: UIViewController {
-
+    
+    @IBOutlet var artImageView: UIImageView!
+    
+    var photo: Photo!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        artImageView.image = UIImage(named: photo.imageName)
     }
 }
