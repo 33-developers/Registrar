@@ -9,6 +9,22 @@ import UIKit
 
 class PhotoTableViewCell: UITableViewCell {
     
+    @IBOutlet var firstPhotoButton: UIButton! {
+        didSet {
+            firstPhotoButton.layer.cornerRadius = 10
+            firstPhotoButton.contentMode = .scaleAspectFill
+            firstPhotoButton.clipsToBounds = true
+        }
+    }
+    
+    @IBOutlet var secondPhotoButton: UIButton! {
+        didSet {
+            secondPhotoButton.layer.cornerRadius = 10
+            secondPhotoButton.contentMode = .scaleAspectFill
+            secondPhotoButton.clipsToBounds = true
+        }
+    }
+    
     @IBOutlet var photoOne: UIImageView! {
         didSet {
             photoOne.layer.cornerRadius = 10
@@ -20,14 +36,6 @@ class PhotoTableViewCell: UITableViewCell {
         didSet {
             photoTwo.layer.cornerRadius = 10
             photoTwo.contentMode = .scaleAspectFill
-        }
-    }
-    
-    func getSet(photo: String, value: Int) {
-        if value % 2 == 0 {
-            photoOne.image = UIImage(named: photo)
-        } else {
-            photoTwo.image = UIImage(named: photo)
         }
     }
 }

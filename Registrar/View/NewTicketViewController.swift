@@ -69,9 +69,14 @@ extension NewTicketViewController: UITableViewDelegate, UITableViewDataSource {
 //    }
     
     // переход на экран участников
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard let memberVC = segue.destination as? MemberViewController else { return }
+//        memberVC.ticket = ticket
+//    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let memberVC = segue.destination as? MemberViewController else { return }
-        memberVC.ticket = ticket
+        guard let questionVC = segue.destination as? PhotoTableViewController else { return }
+        questionVC.ticket = ticket
     }
 }
 
