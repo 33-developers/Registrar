@@ -10,6 +10,8 @@ import UIKit
 final class NewTicketViewController: UIViewController {
     var ticket: Ticket!
     
+    var flagEditingMember = true
+    
     @IBOutlet weak var addressTextField: UITextField!
     
     @IBOutlet weak var tableView: UITableView!
@@ -28,10 +30,15 @@ final class NewTicketViewController: UIViewController {
         addressTextField.text = ticket.address
     }
     
-    // обновления таблицы при добавлении элементов
+    // обновления таблицы при добавлении новых элементов
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
+        flagEditingMember = true
+    }
+    
+    @IBAction func addMember(_ sender: UIButton) {
+        flagEditingMember = false
     }
 }
 
@@ -44,24 +51,26 @@ extension NewTicketViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "memberCell", for: indexPath)
         let member = ticket.members[indexPath.row]
         var content = cell.defaultContentConfiguration()
-        content.text = "\(member.nameCar) \(member.modelCar)"
+        content.text = "\(indexPath.row + 1). \(member.nameCar) \(member.modelCar)"
         content.secondaryText = member.gosNumber
         cell.contentConfiguration = content
         return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let photoVC = segue.destination as? PhotoTableViewController else { return }
-        if segue.identifier == "showPhotos" {
+        if let photoVC = segue.destination as? PhotoTableViewController {
             photoVC.ticket = ticket
-        }
-        
-        guard let ticketVC = segue.destination as? MemberViewController else { return }
-        guard let index = tableView.indexPathForSelectedRow else { return }
-        ticketVC.ticket = ticket
-        if segue.identifier == "editMember" {
-            ticketVC.member = ticket.members[index.row]
-            ticketVC.flagEditing = true
+        } else if let ticketVC = segue.destination as? MemberViewController {
+            if flagEditingMember {
+                guard let index = tableView.indexPathForSelectedRow else { return }
+                ticketVC.ticket = ticket
+                ticketVC.member = ticket.members[index.row]
+                ticketVC.index = index.row
+                ticketVC.flagEditingMember = true
+            } else {
+                ticketVC.ticket = ticket
+                ticketVC.flagEditingMember = false
+            }
         }
     }
 }

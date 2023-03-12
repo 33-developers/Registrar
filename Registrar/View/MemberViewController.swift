@@ -11,9 +11,11 @@ final class MemberViewController: UIViewController {
 
     var ticket: Ticket!
     var member: Member!
-    var flagEditing = false
+    var index: Int!
     
-    @IBOutlet weak var fullname: UITextField!
+    var flagEditingMember = false
+    
+    @IBOutlet weak var fullName: UITextField!
     @IBOutlet weak var nameCar: UITextField!
     @IBOutlet weak var modelCar: UITextField!
     @IBOutlet weak var gosNumber: UITextField!
@@ -25,21 +27,24 @@ final class MemberViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getInfoMember()
+        
         configurationButton()
         memberButton.layer.cornerRadius = 10
     }
     
     func configurationButton() {
-        if !flagEditing {
+        if !flagEditingMember {
+            title = "Новый участник"
             memberButton.setTitle("Добавить участника", for: .normal)
         } else {
+            title = "Участник № \(index + 1)"
+            getInfoMember()
             memberButton.setTitle("Сохранить", for: .normal)
         }
     }
     
     func getInfoMember() {
-        fullname.text = member.fullName
+        fullName.text = member.fullName
         nameCar.text = member.nameCar
         modelCar.text = member.modelCar
         gosNumber.text = member.gosNumber
@@ -48,19 +53,17 @@ final class MemberViewController: UIViewController {
         numberDocument.text = member.numberDocument
     }
     
-    
     @IBAction func actionCheckPolicy(_ sender: UIButton) {
         if serialDocument.text!.isEmpty || numberDocument.text!.isEmpty {
-            //checkPolicyValidity()
             showAlert(withTitle: "Ошибка!", andMessage: "Заполните поля: серия и номер полиса.")
         }
     }
     
     @IBAction func actionAppendNewMember(_ sender: UIButton) {
-        if !flagEditing {
+        if !flagEditingMember {
             newMember()
         } else {
-            member.fullName = fullname.text ?? ""
+            member.fullName = fullName.text ?? ""
             member.nameCar = nameCar.text ?? ""
             member.modelCar = modelCar.text ?? ""
             member.gosNumber = gosNumber.text ?? ""
@@ -73,7 +76,7 @@ final class MemberViewController: UIViewController {
     
     func newMember() {
         let member = Member(
-            fullName: fullname.text ?? "",
+            fullName: fullName.text ?? "",
             nameCar: nameCar.text ?? "",
             modelCar: modelCar.text ?? "",
             gosNumber: gosNumber.text ?? "",
