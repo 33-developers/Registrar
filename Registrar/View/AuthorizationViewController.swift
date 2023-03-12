@@ -26,7 +26,6 @@ final class AuthorizationViewController: UIViewController {
     }
     
     @IBAction func actionAuthorizationButton(_ sender: UIButton) {
-        
         guard loginTextField.text != "",
               passwordTextField.text != "" else {
             getAlertMessage(

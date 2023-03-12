@@ -178,10 +178,10 @@
                                 <rect key="frame" x="70.5" y="144" width="273" height="179"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tO8-Ns-l4D">
-                                <rect key="frame" x="278" y="548" width="116" height="30"/>
+                                <rect key="frame" x="209" y="548" width="185" height="30"/>
                                 <color key="tintColor" red="0.79781907799999996" green="0.79785889389999998" blue="0.8041980863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Забыли пароль?"/>
+                                <state key="normal" title="Забыл данные для входа?"/>
                                 <connections>
                                     <action selector="forgotButtonTapped" destination="fvT-0c-keC" eventType="touchUpInside" id="TDD-su-8iG"/>
                                 </connections>
@@ -496,6 +496,7 @@
                                                     </constraints>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <connections>
+                                                        <action selector="buttonPressed:" destination="AIf-Sn-WmV" eventType="touchUpInside" id="UJa-LV-8tu"/>
                                                         <segue destination="Ese-Mr-OJD" kind="show" identifier="photoOne" id="TkA-U4-vAw"/>
                                                     </connections>
                                                 </button>
@@ -506,6 +507,7 @@
                                                     </constraints>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <connections>
+                                                        <action selector="buttonPressed:" destination="AIf-Sn-WmV" eventType="touchUpInside" id="GiU-jr-oax"/>
                                                         <segue destination="Ese-Mr-OJD" kind="show" identifier="photoTwo" id="8Ua-Mq-ejT"/>
                                                     </connections>
                                                 </button>
@@ -532,12 +534,62 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Фотографии с ДТП" id="4SP-DQ-ifT">
-                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="9Ac-Gi-cK8"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="9Ac-Gi-cK8">
+                            <connections>
+                                <segue destination="U0T-Bb-Bkf" kind="show" id="7Jk-CL-Ibu"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HiO-kj-c2L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1773.913043478261" y="148.66071428571428"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="CTl-BZ-pTB">
+            <objects>
+                <viewController id="U0T-Bb-Bkf" customClass="CameraViewController" customModule="Registrar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mcx-OB-JES">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Блюхера 63 12" translatesAutoresizingMaskIntoConstraints="NO" id="pbO-OO-nUL">
+                                <rect key="frame" x="0.0" y="144" width="414" height="598"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JC2-zW-QtW">
+                                <rect key="frame" x="157" y="752" width="100" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="M5z-lD-1Zk"/>
+                                    <constraint firstAttribute="width" constant="100" id="wIc-Ca-hBP"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="AIf-Sn-WmV" eventType="touchUpInside" id="6io-HJ-JFu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="V5s-zY-thU"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pbO-OO-nUL" firstAttribute="top" secondItem="V5s-zY-thU" secondAttribute="top" id="Mfs-jE-VcX"/>
+                            <constraint firstItem="V5s-zY-thU" firstAttribute="trailing" secondItem="pbO-OO-nUL" secondAttribute="trailing" id="SoM-od-XKJ"/>
+                            <constraint firstItem="JC2-zW-QtW" firstAttribute="centerX" secondItem="Mcx-OB-JES" secondAttribute="centerX" id="iuL-mq-Sc7"/>
+                            <constraint firstItem="V5s-zY-thU" firstAttribute="bottom" secondItem="JC2-zW-QtW" secondAttribute="bottom" constant="10" id="lpe-gT-tSv"/>
+                            <constraint firstItem="pbO-OO-nUL" firstAttribute="leading" secondItem="V5s-zY-thU" secondAttribute="leading" id="mHm-cR-Q6x"/>
+                            <constraint firstItem="JC2-zW-QtW" firstAttribute="top" secondItem="pbO-OO-nUL" secondAttribute="bottom" constant="10" id="mZn-tn-frl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="lfY-sz-Wse"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0eR-dA-FQf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2492.753623188406" y="148.66071428571428"/>
         </scene>
         <!--Info Photo View Controller-->
         <scene sceneID="CES-wU-Ott">
@@ -548,18 +600,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="paf-d4-EE5">
-                                <rect key="frame" x="20" y="164" width="374" height="390"/>
+                                <rect key="frame" x="20" y="164" width="374" height="374"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="390" id="0b7-h9-Azo"/>
+                                    <constraint firstAttribute="width" secondItem="paf-d4-EE5" secondAttribute="height" multiplier="1:1" id="6DP-pG-Vdz"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iYy-Nu-DdF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="paf-d4-EE5" firstAttribute="leading" secondItem="iYy-Nu-DdF" secondAttribute="leading" constant="20" id="GwT-Fw-Fdp"/>
-                            <constraint firstItem="paf-d4-EE5" firstAttribute="top" secondItem="iYy-Nu-DdF" secondAttribute="top" constant="20" id="Sxh-9F-o2f"/>
-                            <constraint firstItem="iYy-Nu-DdF" firstAttribute="trailing" secondItem="paf-d4-EE5" secondAttribute="trailing" constant="20" id="cdi-ME-eQ0"/>
+                            <constraint firstItem="paf-d4-EE5" firstAttribute="leading" secondItem="iYy-Nu-DdF" secondAttribute="leading" constant="20" id="WWU-Ho-2aa"/>
+                            <constraint firstItem="iYy-Nu-DdF" firstAttribute="trailing" secondItem="paf-d4-EE5" secondAttribute="trailing" constant="20" id="cmz-jV-52P"/>
+                            <constraint firstItem="paf-d4-EE5" firstAttribute="top" secondItem="iYy-Nu-DdF" secondAttribute="top" constant="20" id="hBR-5O-XYY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DAA-xZ-Pnv"/>
@@ -569,7 +621,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5oI-UO-Wfs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2492.0930232558139" y="148.71244635193133"/>
+            <point key="canvasLocation" x="1774" y="846"/>
         </scene>
         <!--Address Table View Controller-->
         <scene sceneID="rS2-F7-Fsg">
@@ -629,13 +681,14 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="8Ua-Mq-ejT"/>
+        <segue reference="TkA-U4-vAw"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="33devs" width="2362" height="2362"/>
         <image name="Error" width="1685" height="1843"/>
         <image name="avto4" width="2918" height="1840"/>
         <image name="info.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="Блюхера 63 12" width="1032" height="774"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
