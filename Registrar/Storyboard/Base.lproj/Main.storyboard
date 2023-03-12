@@ -534,7 +534,7 @@
                     <navigationItem key="navigationItem" title="Фотографии с ДТП" id="4SP-DQ-ifT">
                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="9Ac-Gi-cK8">
                             <connections>
-                                <segue destination="U0T-Bb-Bkf" kind="show" id="7Jk-CL-Ibu"/>
+                                <action selector="openCameraButton:" destination="AIf-Sn-WmV" id="AT9-Tw-bsu"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -552,7 +552,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Блюхера 63 12" translatesAutoresizingMaskIntoConstraints="NO" id="pbO-OO-nUL">
-                                <rect key="frame" x="0.0" y="144" width="414" height="598"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="694"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JC2-zW-QtW">
                                 <rect key="frame" x="157" y="752" width="100" height="100"/>

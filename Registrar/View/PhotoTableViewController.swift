@@ -17,6 +17,11 @@ final class PhotoTableViewController: UITableViewController {
         buttonImage = sender.currentBackgroundImage
     }
     
+    @IBAction func openCameraButton(_ sender: Any) {
+        showAlert(withTitle: "⚠️", andMessage: "Неизвестная ошибка. \nКамера не доступна.")
+    }
+    
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         ticket.photos.count / 2 + 1
     }
@@ -51,5 +56,15 @@ final class PhotoTableViewController: UITableViewController {
         if segue.identifier == "photoTwo" {
             infoPhotoVC.passedButtonImage = buttonImage
         }
+    }
+}
+
+// всплывающее окно
+extension PhotoTableViewController {
+    private func showAlert(withTitle title: String, andMessage message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default)
+        alert.addAction(okAction)
+        present(alert, animated: true)
     }
 }
