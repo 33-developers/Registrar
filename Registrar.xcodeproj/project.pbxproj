@@ -26,6 +26,7 @@
 		A886E82929899D7D00E15865 /* NewTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A886E82829899D7D00E15865 /* NewTicketViewController.swift */; };
 		A8F9E86529BBBABA00CD9992 /* PhotoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F9E86429BBBABA00CD9992 /* PhotoTableViewController.swift */; };
 		A8F9E86729BC2E2E00CD9992 /* InfoPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F9E86629BC2E2E00CD9992 /* InfoPhotoViewController.swift */; };
+		A8F9E86929BDB25100CD9992 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F9E86829BDB25100CD9992 /* CameraViewController.swift */; };
 		EF6E01FE29BC47F70007B14E /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6E01FD29BC47F70007B14E /* PhotoTableViewCell.swift */; };
 		EFE43BC9298BC8AC009BD4AA /* OptionNewTicketController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE43BC8298BC8AC009BD4AA /* OptionNewTicketController.swift */; };
 		EFE43BCC298BCDCB009BD4AA /* OptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE43BCB298BCDCB009BD4AA /* OptionCollectionViewCell.swift */; };
@@ -53,6 +54,7 @@
 		A886E82829899D7D00E15865 /* NewTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTicketViewController.swift; sourceTree = "<group>"; };
 		A8F9E86429BBBABA00CD9992 /* PhotoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewController.swift; sourceTree = "<group>"; };
 		A8F9E86629BC2E2E00CD9992 /* InfoPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPhotoViewController.swift; sourceTree = "<group>"; };
+		A8F9E86829BDB25100CD9992 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		EF6E01FD29BC47F70007B14E /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
 		EFE43BC8298BC8AC009BD4AA /* OptionNewTicketController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionNewTicketController.swift; sourceTree = "<group>"; };
 		EFE43BCB298BCDCB009BD4AA /* OptionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				8ABD727E298B985200F00841 /* AboutViewController.swift */,
 				A8F9E86429BBBABA00CD9992 /* PhotoTableViewController.swift */,
 				A8F9E86629BC2E2E00CD9992 /* InfoPhotoViewController.swift */,
+				A8F9E86829BDB25100CD9992 /* CameraViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFE43BCC298BCDCB009BD4AA /* OptionCollectionViewCell.swift in Sources */,
+				A8F9E86929BDB25100CD9992 /* CameraViewController.swift in Sources */,
 				8A6BF62129BD1EF3009514E0 /* Developer.swift in Sources */,
 				8A6BF61D29BD1D12009514E0 /* TIcket.swift in Sources */,
 				76B1FE26298978430055B8D7 /* User.swift in Sources */,
