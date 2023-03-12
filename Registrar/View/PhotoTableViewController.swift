@@ -32,10 +32,11 @@ class PhotoTableViewController: UITableViewController {
 //    }
 
     // MARK: - Table view data source
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        3
-//    }
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        3
+    }
     
+
 //    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
 //        switch section {
 //        case 0: return "Блюхера 63"
@@ -43,6 +44,7 @@ class PhotoTableViewController: UITableViewController {
 //        default: return "Блюхера-Доватора"
 //        }
 //    }
+
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        switch section {
@@ -59,6 +61,7 @@ class PhotoTableViewController: UITableViewController {
            return UITableViewCell()
         }
         
+
 //        let photo = person.tickets[indexPath.section].photo[indexPath.row].imageName
 //        let photoValue = person.tickets[indexPath.section].photo.count
         
@@ -77,6 +80,11 @@ class PhotoTableViewController: UITableViewController {
                 cell.secondPhotoButton.setBackgroundImage(oddImage, for: .normal)
             }
         }
+
+//      let photo = person.tickets[indexPath.section].photo[indexPath.row].imageName
+
+//      cell.getSet(photo: photo, value: indexPath.row)
+
         return cell
     }
     

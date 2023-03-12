@@ -31,6 +31,7 @@ class PhotoTableViewCell: UITableViewCell {
             photoOne.contentMode = .scaleAspectFill
         }
     }
+    
     @IBOutlet var photoTwo: UIImageView! {
         didSet {
             photoTwo.layer.cornerRadius = 10
