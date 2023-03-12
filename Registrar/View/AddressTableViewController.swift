@@ -10,7 +10,6 @@ import UIKit
 final class AddressTableViewController: UITableViewController {
     
     var person: User!
-    //    var tickets: [Ticket] = []
     
     private let searchController = UISearchController(searchResultsController: nil)
     
@@ -28,14 +27,17 @@ final class AddressTableViewController: UITableViewController {
         super.viewDidLoad()
         title = "Адреса заявок"
         
-        // настройка строки поиска
+        settingSearchController()
+    }
+    
+    // настройка строки поиска
+    private func settingSearchController() {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Поиск"
         navigationItem.searchController = searchController
         definesPresentationContext = true
     }
-    
     
     @IBAction func addNewTicketButton(_ sender: Any) {
         alertAppendNewTicket()
@@ -115,6 +117,4 @@ extension AddressTableViewController: UISearchResultsUpdating {
         })
         tableView.reloadData()
     }
-    
-    
 }

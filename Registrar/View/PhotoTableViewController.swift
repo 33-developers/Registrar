@@ -21,7 +21,6 @@ final class PhotoTableViewController: UITableViewController {
         showAlert(withTitle: "⚠️", andMessage: "Неизвестная ошибка. \nКамера не доступна.")
     }
     
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         ticket.photos.count / 2 + 1
     }
@@ -39,7 +38,6 @@ final class PhotoTableViewController: UITableViewController {
                 cell.firstPhotoButton.setBackgroundImage(evenImage, for: .normal)
             }
         }
-        
         if (oddIndex < ticket.photos.count) {
             if let oddImage = UIImage(named: ticket.photos[oddIndex].imageName) {
                 cell.secondPhotoButton.setBackgroundImage(oddImage, for: .normal)
