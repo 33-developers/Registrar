@@ -56,8 +56,7 @@ class PhotoTableViewController: UITableViewController {
         }
         
         let photo = person.tickets[indexPath.section].photo[indexPath.row].imageName
-        //let photoValue = person.tickets[indexPath.section].photo.count
-        
+
         cell.getSet(photo: photo, value: indexPath.row)
         return cell
     }
