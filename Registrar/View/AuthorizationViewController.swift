@@ -7,9 +7,9 @@
 
 import UIKit
 
-class AuthorizationViewController: UIViewController {
+final class AuthorizationViewController: UIViewController {
     
-    var person = Person.newPerson()
+    var user = User.newUser()
 
     @IBOutlet weak var authorizationButton: UIButton!
     
@@ -21,35 +21,62 @@ class AuthorizationViewController: UIViewController {
         
         title = ""
         authorizationButton.layer.cornerRadius = 10
-        
-    }
-
-    @IBAction func aboutButtonTapped(_ sender: UIBarButtonItem) {
+        loginTextField.text = user.login
+        passwordTextField.text = user.password
     }
     
     @IBAction func actionAuthorizationButton(_ sender: UIButton) {
         
-        guard (loginTextField.text?.isEmpty) != nil else { return }
-        guard (passwordTextField.text?.isEmpty) != nil else { return }
+        guard loginTextField.text != "",
+              passwordTextField.text != "" else {
+            getAlertMessage(
+                title: "⚠️",
+                message: "Логин и пароль не могут быть пустыми! Заполните оба поля!"
+            )
+            return
+        }
         
-        if person.login == loginTextField.text && person.password == passwordTextField.text {
-//            let next = self.storyboard?.instantiateViewController(withIdentifier: "address") as! AddressTableViewController
-//            self.present(next, animated: true, completion: nil)
-            print("Ok")
-        } else {
-            print("No")
+        guard loginTextField.text == user.login, passwordTextField.text == user.password else {
+            getAlertMessage(
+                title: "Неправильный логин или пароль",
+                message: "Введите корректные данные для входа"
+            )
             return
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let addressVC = segue.destination as? AddressTableViewController else { return }
-        
-        addressVC.person = person
+        addressVC.person = user
     }
     
+    private func getAlertMessage(title: String, message: String) {
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
+        alert.addAction(UIAlertAction(
+            title: "ОК",
+            style: .cancel, handler: { _ in
+                self.passwordTextField.text = ""
+            }
+        )
+        )
+        present(alert, animated: true)
+    }
+    
+    @IBAction func forgotButtonTapped() {
+        getAlertMessage(title: "Ой!💡", message: "Логин: \(user.login)\nПароль: \(user.password)")
+    }
 }
 
-// добавить модель на авторизацию логин\пароль
-// добавить скрытие клавиатуры по тапу
-// добавить очистку логина если не верно введено (задание 2.6)
+extension AuthorizationViewController {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+}
+// добавить модель на авторизацию логин\пароль ✅
+// добавить скрытие клавиатуры по тапу ✅
+// добавить очистку логина если не верно введено (задание 2.6) ✅

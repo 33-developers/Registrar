@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AboutViewController: UIViewController {
+final class AboutViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     
@@ -18,9 +18,7 @@ class AboutViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        
     }
-
 }
 
 extension AboutViewController: UITableViewDelegate, UITableViewDataSource {
@@ -32,16 +30,11 @@ extension AboutViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! DevelopersTableViewCell
         let member = members[indexPath.row]
         cell.getSet(member: member)
-
+        cell.photo.layer.cornerRadius = cell.photo.frame.width / 2
         return cell
     }
     
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.alpha = 0
-        UIView.animate(withDuration: 0.5, delay: 0.2 * Double(indexPath.row), options: .curveEaseIn, animations: { cell.alpha = 1 }, completion: nil)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
-    
-    
-    
-    
 }

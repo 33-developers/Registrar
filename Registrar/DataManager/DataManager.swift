@@ -10,8 +10,8 @@ class DataManager {
     
     static var shared = DataManager()
     
-    let person = Person(
-        login: "1111",
+    let user = User(
+        login: "+79990001100",
         password: "1111",
         tickets: [
             Ticket(
