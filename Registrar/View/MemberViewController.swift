@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MemberViewController: UIViewController {
+final class MemberViewController: UIViewController {
 
     var ticket: Ticket!
     var member: Member!

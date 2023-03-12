@@ -7,11 +7,11 @@
 
 import UIKit
 
-class AddressTableViewController: UITableViewController {
+final class AddressTableViewController: UITableViewController {
     
     var person: User!
-//    var tickets: [Ticket] = []
-
+    //    var tickets: [Ticket] = []
+    
     private let searchController = UISearchController(searchResultsController: nil)
     
     private var filteredTicket: [Ticket] = []
@@ -63,12 +63,12 @@ class AddressTableViewController: UITableViewController {
     }
     
     // анимация появления ячеек
-//    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//        cell.alpha = 0
-//        UIView.animate(withDuration: 0.5, delay: 0.1 * Double(indexPath.row), options: .curveEaseInOut, animations: {
-//            cell.alpha = 1
-//        })
-//    }
+    //    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    //        cell.alpha = 0
+    //        UIView.animate(withDuration: 0.5, delay: 0.1 * Double(indexPath.row), options: .curveEaseInOut, animations: {
+    //            cell.alpha = 1
+    //        })
+    //    }
     
     // передача тикета по тапу
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

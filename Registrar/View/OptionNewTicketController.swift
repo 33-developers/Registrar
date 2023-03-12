@@ -7,11 +7,11 @@
 
 import UIKit
 
-class OptionNewTicketController: UIViewController {
+final class OptionNewTicketController: UIViewController {
     
     let idOptionCell = "idOptionCell"
     var photos: [Photo] = []
-
+    
     var collectionView: UICollectionView!
     var collectionViewFlowLayout: UICollectionViewFlowLayout!
     

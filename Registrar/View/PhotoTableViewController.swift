@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PhotoTableViewController: UITableViewController {
+final class PhotoTableViewController: UITableViewController {
     
     var buttonImage: UIImage?
     
