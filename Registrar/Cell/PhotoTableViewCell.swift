@@ -24,18 +24,4 @@ class PhotoTableViewCell: UITableViewCell {
             secondPhotoButton.clipsToBounds = true
         }
     }
-    
-    @IBOutlet var photoOne: UIImageView! {
-        didSet {
-            photoOne.layer.cornerRadius = 10
-            photoOne.contentMode = .scaleAspectFill
-        }
-    }
-    
-    @IBOutlet var photoTwo: UIImageView! {
-        didSet {
-            photoTwo.layer.cornerRadius = 10
-            photoTwo.contentMode = .scaleAspectFill
-        }
-    }
 }

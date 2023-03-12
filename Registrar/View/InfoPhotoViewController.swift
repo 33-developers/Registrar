@@ -11,12 +11,20 @@ class InfoPhotoViewController: UIViewController {
     
     @IBOutlet var photoImageView: UIImageView!
     
-    var photos: [Photo]!
-    var index: Int!
-    
+    var passedButtonImage: UIImage?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        photoImageView.image = UIImage(named: photos[index].imageName)
+        configurationPhotoImageView()
+        
+        if let image = passedButtonImage {
+            photoImageView.image = image
+        }
+    }
+    
+    func configurationPhotoImageView() {
+        photoImageView.layer.cornerRadius = 10
+        photoImageView.contentMode = .scaleAspectFill
+        photoImageView.clipsToBounds = true
     }
 }
