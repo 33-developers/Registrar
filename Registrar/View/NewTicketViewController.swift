@@ -26,8 +26,6 @@ class NewTicketViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         addressTextField.text = ticket.address
-        
-//        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(addButtonTapped))
     }
     
     // обновления таблицы при добавлении элементов
@@ -35,13 +33,6 @@ class NewTicketViewController: UIViewController {
         super.viewWillAppear(animated)
         tableView.reloadData()
     }
-    
-//    @objc private func addButtonTapped() {
-//        let option = OptionNewTicketController()
-//        option.photos = ticket.photo
-//        navigationController?.pushViewController(option, animated: true)
-//    }
-    
 }
 
 extension NewTicketViewController: UITableViewDelegate, UITableViewDataSource {
@@ -56,27 +47,22 @@ extension NewTicketViewController: UITableViewDelegate, UITableViewDataSource {
         content.text = "\(member.nameCar) \(member.modelCar)"
         content.secondaryText = member.gosNumber
         cell.contentConfiguration = content
-        
         return cell
     }
     
-    // анимация появления ячеек
-//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//        cell.alpha = 0
-//        UIView.animate(withDuration: 0.5, delay: 0.1 * Double(indexPath.row), options: .curveEaseInOut, animations: {
-//        cell.alpha = 1
-//        })
-//    }
-    
-    // переход на экран участников
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let memberVC = segue.destination as? MemberViewController else { return }
-//        memberVC.ticket = ticket
-//    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let questionVC = segue.destination as? PhotoTableViewController else { return }
-        questionVC.ticket = ticket
+        guard let photoVC = segue.destination as? PhotoTableViewController else { return }
+        if segue.identifier == "showPhotos" {
+            photoVC.ticket = ticket
+        }
+        
+        guard let ticketVC = segue.destination as? MemberViewController else { return }
+        guard let index = tableView.indexPathForSelectedRow else { return }
+        ticketVC.ticket = ticket
+        if segue.identifier == "editMember" {
+            ticketVC.member = ticket.members[index.row]
+            ticketVC.flagEditing = true
+        }
     }
 }
 

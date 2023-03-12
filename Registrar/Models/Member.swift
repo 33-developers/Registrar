@@ -8,13 +8,13 @@
 import Foundation
 
 class Member {
-    let fullName: String
-    let nameCar: String
-    let modelCar: String
-    let gosNumber: String
-    let companyName: String
-    let serialDocument: String
-    let numberDocument: String
+    var fullName: String
+    var nameCar: String
+    var modelCar: String
+    var gosNumber: String
+    var companyName: String
+    var serialDocument: String
+    var numberDocument: String
     
     init(
         fullName: String,

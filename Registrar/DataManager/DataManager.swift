@@ -35,7 +35,16 @@ class DataManager {
                         companyName: "АльфаСтрахование",
                         serialDocument: "TTT",
                         numberDocument: "7195736588"
-                    )
+                    ),
+                    Member(
+                        fullName: "1",
+                        nameCar: "1",
+                        modelCar: "1",
+                        gosNumber: "1",
+                        companyName: "1",
+                        serialDocument: "1",
+                        numberDocument: "1"
+                    ),
                 ], photo: [
                     Photo(imageName: "Блюхера 63 1"),
                     Photo(imageName: "Блюхера 63 2"),
