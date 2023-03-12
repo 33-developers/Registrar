@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct Ticket {
-    let address: String
+class Ticket {
+    var address: String
     let status: String
     let ticketСreated = false
     var members: [Member]

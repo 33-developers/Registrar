@@ -278,6 +278,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="8TD-yh-c0f" kind="show" identifier="editMember" id="gah-C8-mrs"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -301,7 +304,7 @@
                     <navigationItem key="navigationItem" id="Qjb-7e-Q4r">
                         <barButtonItem key="rightBarButtonItem" title="Фотографии" id="RUw-e2-WF0">
                             <connections>
-                                <segue destination="AIf-Sn-WmV" kind="show" id="0Wh-r5-gVv"/>
+                                <segue destination="AIf-Sn-WmV" kind="show" identifier="showPhotos" id="0Wh-r5-gVv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -682,6 +685,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="TkA-U4-vAw"/>
+        <segue reference="gah-C8-mrs"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="33devs" width="2362" height="2362"/>

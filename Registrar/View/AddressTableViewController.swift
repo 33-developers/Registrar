@@ -10,7 +10,7 @@ import UIKit
 class AddressTableViewController: UITableViewController {
     
     var person: User!
-    var tickets: [Ticket] = []
+//    var tickets: [Ticket] = []
 
     private let searchController = UISearchController(searchResultsController: nil)
     

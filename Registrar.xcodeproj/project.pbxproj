@@ -11,7 +11,7 @@
 		76B1FE26298978430055B8D7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B1FE25298978430055B8D7 /* User.swift */; };
 		76F863AC298591BD00C621DE /* AddressTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F863AB298591BD00C621DE /* AddressTableViewController.swift */; };
 		8A6BF61B29BD1B95009514E0 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6BF61A29BD1B95009514E0 /* Member.swift */; };
-		8A6BF61D29BD1D12009514E0 /* TIcket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6BF61C29BD1D12009514E0 /* TIcket.swift */; };
+		8A6BF61D29BD1D12009514E0 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6BF61C29BD1D12009514E0 /* Ticket.swift */; };
 		8A6BF61F29BD1ECB009514E0 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6BF61E29BD1ECB009514E0 /* Photo.swift */; };
 		8A6BF62129BD1EF3009514E0 /* Developer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6BF62029BD1EF3009514E0 /* Developer.swift */; };
 		8ABD727F298B985200F00841 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABD727E298B985200F00841 /* AboutViewController.swift */; };
@@ -37,7 +37,7 @@
 		76B1FE25298978430055B8D7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		76F863AB298591BD00C621DE /* AddressTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressTableViewController.swift; sourceTree = "<group>"; };
 		8A6BF61A29BD1B95009514E0 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
-		8A6BF61C29BD1D12009514E0 /* TIcket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIcket.swift; sourceTree = "<group>"; };
+		8A6BF61C29BD1D12009514E0 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		8A6BF61E29BD1ECB009514E0 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		8A6BF62029BD1EF3009514E0 /* Developer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Developer.swift; sourceTree = "<group>"; };
 		8ABD727E298B985200F00841 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
@@ -83,10 +83,10 @@
 			isa = PBXGroup;
 			children = (
 				76B1FE25298978430055B8D7 /* User.swift */,
-				8A6BF62029BD1EF3009514E0 /* Developer.swift */,
-				8A6BF61E29BD1ECB009514E0 /* Photo.swift */,
-				8A6BF61C29BD1D12009514E0 /* TIcket.swift */,
+				8A6BF61C29BD1D12009514E0 /* Ticket.swift */,
 				8A6BF61A29BD1B95009514E0 /* Member.swift */,
+				8A6BF61E29BD1ECB009514E0 /* Photo.swift */,
+				8A6BF62029BD1EF3009514E0 /* Developer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -248,7 +248,7 @@
 				EFE43BCC298BCDCB009BD4AA /* OptionCollectionViewCell.swift in Sources */,
 				A8F9E86929BDB25100CD9992 /* CameraViewController.swift in Sources */,
 				8A6BF62129BD1EF3009514E0 /* Developer.swift in Sources */,
-				8A6BF61D29BD1D12009514E0 /* TIcket.swift in Sources */,
+				8A6BF61D29BD1D12009514E0 /* Ticket.swift in Sources */,
 				76B1FE26298978430055B8D7 /* User.swift in Sources */,
 				76AB159D29898A3400ABA0C9 /* DataManager.swift in Sources */,
 				A886E8212988EE6F00E15865 /* MemberViewController.swift in Sources */,
