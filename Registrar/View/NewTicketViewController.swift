@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NewTicketViewController: UIViewController {
+final class NewTicketViewController: UIViewController {
     var ticket: Ticket!
     
     @IBOutlet weak var addressTextField: UITextField!
@@ -39,7 +39,7 @@ extension NewTicketViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         ticket.members.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "memberCell", for: indexPath)
         let member = ticket.members[indexPath.row]

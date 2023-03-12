@@ -10,7 +10,7 @@ import UIKit
 final class AuthorizationViewController: UIViewController {
     
     var user = User.newUser()
-
+    
     @IBOutlet weak var authorizationButton: UIButton!
     
     @IBOutlet weak var loginTextField: UITextField!
@@ -76,6 +76,3 @@ extension AuthorizationViewController {
         view.endEditing(true)
     }
 }
-// добавить модель на авторизацию логин\пароль ✅
-// добавить скрытие клавиатуры по тапу ✅
-// добавить очистку логина если не верно введено (задание 2.6) ✅

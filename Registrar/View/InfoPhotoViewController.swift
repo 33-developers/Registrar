@@ -7,7 +7,7 @@
 
 import UIKit
 
-class InfoPhotoViewController: UIViewController {
+final class InfoPhotoViewController: UIViewController {
     
     @IBOutlet var photoImageView: UIImageView!
     
