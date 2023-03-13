@@ -35,16 +35,7 @@ class DataManager {
                         companyName: "АльфаСтрахование",
                         serialDocument: "TTT",
                         numberDocument: "7195736588"
-                    ),
-                    Member(
-                        fullName: "1",
-                        nameCar: "1",
-                        modelCar: "1",
-                        gosNumber: "1",
-                        companyName: "1",
-                        serialDocument: "1",
-                        numberDocument: "1"
-                    ),
+                    )
                 ], photo: [
                     Photo(imageName: "Блюхера 63 1"),
                     Photo(imageName: "Блюхера 63 2"),
@@ -88,15 +79,6 @@ class DataManager {
                         companyName: "АльфаСтрахование",
                         serialDocument: "ААА",
                         numberDocument: "9165519077"
-                    ),
-                    Member(
-                        fullName: "Попова Светлана Валерьевна",
-                        nameCar: "Ниссан",
-                        modelCar: "Альмера",
-                        gosNumber: "Н831НР96",
-                        companyName: "АльфаСтрахование",
-                        serialDocument: "РРР",
-                        numberDocument: "1937789351"
                     )
                 ], photo: [
                     Photo(imageName: "Блюхера-Дарвина 1"),
