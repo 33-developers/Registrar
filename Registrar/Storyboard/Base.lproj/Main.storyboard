@@ -230,7 +230,7 @@
             </objects>
             <point key="canvasLocation" x="148" y="-559"/>
         </scene>
-        <!--Заявка-->
+        <!--New Ticket View Controller-->
         <scene sceneID="tYV-wQ-bfn">
             <objects>
                 <viewController id="4Xu-4L-IEp" customClass="NewTicketViewController" customModule="Registrar" customModuleProvider="target" sceneMemberID="viewController">
@@ -238,38 +238,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="AKV-YL-vJd">
-                                <rect key="frame" x="20" y="144" width="374" height="83.5"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Адрес" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="RIk-LZ-84m">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXB-Ub-vGC">
-                                        <rect key="frame" x="0.0" y="49" width="374" height="34.5"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Добавить участника"/>
-                                        <connections>
-                                            <action selector="addMember:" destination="4Xu-4L-IEp" eventType="touchUpInside" id="3tf-wl-gEI"/>
-                                            <segue destination="8TD-yh-c0f" kind="show" id="1Cs-7S-Loc"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qXF-xv-Gdq">
-                                <rect key="frame" x="20" y="768" width="374" height="44"/>
-                                <color key="backgroundColor" red="0.92738097909999995" green="0.44387716049999998" blue="0.40597248079999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="knp-vf-qgE"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Сохранить"/>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9lV-l1-TP0">
-                                <rect key="frame" x="0.0" y="247.5" width="414" height="500.5"/>
+                                <rect key="frame" x="0.0" y="144" width="414" height="604"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="memberCell" id="nFX-OI-c98">
@@ -285,24 +255,34 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXB-Ub-vGC">
+                                <rect key="frame" x="20" y="768" width="374" height="44"/>
+                                <color key="backgroundColor" red="0.92407768960000003" green="0.4437425733" blue="0.4098921418" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="CEC-lB-sO4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Добавить участника"/>
+                                <connections>
+                                    <action selector="addMember:" destination="4Xu-4L-IEp" eventType="touchUpInside" id="3tf-wl-gEI"/>
+                                    <segue destination="8TD-yh-c0f" kind="show" id="1Cs-7S-Loc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4RB-w5-qtd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="4RB-w5-qtd" firstAttribute="trailing" secondItem="qXF-xv-Gdq" secondAttribute="trailing" constant="20" id="5aR-pM-ahz"/>
-                            <constraint firstItem="9lV-l1-TP0" firstAttribute="top" secondItem="AKV-YL-vJd" secondAttribute="bottom" constant="20" id="7Fi-Zv-qLG"/>
-                            <constraint firstItem="AKV-YL-vJd" firstAttribute="centerX" secondItem="rq0-Xo-ZTH" secondAttribute="centerX" id="Btj-jZ-U5M"/>
-                            <constraint firstItem="4RB-w5-qtd" firstAttribute="trailing" secondItem="AKV-YL-vJd" secondAttribute="trailing" constant="20" id="N1q-By-HU5"/>
-                            <constraint firstItem="AKV-YL-vJd" firstAttribute="leading" secondItem="4RB-w5-qtd" secondAttribute="leading" constant="20" id="QAz-BA-2ze"/>
-                            <constraint firstItem="4RB-w5-qtd" firstAttribute="bottom" secondItem="qXF-xv-Gdq" secondAttribute="bottom" constant="50" id="Wlz-Lj-xcZ"/>
-                            <constraint firstItem="qXF-xv-Gdq" firstAttribute="top" secondItem="9lV-l1-TP0" secondAttribute="bottom" constant="20" id="YdA-9v-pFm"/>
+                            <constraint firstItem="9lV-l1-TP0" firstAttribute="top" secondItem="4RB-w5-qtd" secondAttribute="top" id="5HE-vT-C9c"/>
                             <constraint firstItem="9lV-l1-TP0" firstAttribute="leading" secondItem="4RB-w5-qtd" secondAttribute="leading" id="abr-Pw-wni"/>
-                            <constraint firstItem="AKV-YL-vJd" firstAttribute="top" secondItem="4RB-w5-qtd" secondAttribute="top" id="egj-8r-R5G"/>
+                            <constraint firstItem="uXB-Ub-vGC" firstAttribute="leading" secondItem="4RB-w5-qtd" secondAttribute="leading" constant="20" id="cNL-5K-FdQ"/>
+                            <constraint firstItem="4RB-w5-qtd" firstAttribute="trailing" secondItem="uXB-Ub-vGC" secondAttribute="trailing" constant="20" id="e2I-KN-BQ1"/>
+                            <constraint firstItem="uXB-Ub-vGC" firstAttribute="top" secondItem="9lV-l1-TP0" secondAttribute="bottom" constant="20" id="gnP-CT-751"/>
+                            <constraint firstItem="4RB-w5-qtd" firstAttribute="bottom" secondItem="uXB-Ub-vGC" secondAttribute="bottom" constant="50" id="u0y-Ra-2PS"/>
                             <constraint firstItem="4RB-w5-qtd" firstAttribute="trailing" secondItem="9lV-l1-TP0" secondAttribute="trailing" id="vtW-i0-hfT"/>
-                            <constraint firstItem="qXF-xv-Gdq" firstAttribute="leading" secondItem="4RB-w5-qtd" secondAttribute="leading" constant="20" id="xdP-Ou-Oos"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Заявка" id="Qjb-7e-Q4r">
+                    <navigationItem key="navigationItem" id="Qjb-7e-Q4r">
                         <barButtonItem key="rightBarButtonItem" title="Фотографии" id="RUw-e2-WF0">
                             <connections>
                                 <segue destination="AIf-Sn-WmV" kind="show" identifier="showPhotos" id="0Wh-r5-gVv"/>
@@ -310,8 +290,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="addRequestButton" destination="qXF-xv-Gdq" id="boq-I7-348"/>
-                        <outlet property="addressTextField" destination="RIk-LZ-84m" id="ONG-9Y-4ru"/>
+                        <outlet property="addNewMember" destination="uXB-Ub-vGC" id="TwS-5Q-nX8"/>
                         <outlet property="tableView" destination="9lV-l1-TP0" id="ulO-sL-plp"/>
                     </connections>
                 </viewController>
