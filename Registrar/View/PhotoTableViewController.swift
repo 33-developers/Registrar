@@ -29,6 +29,7 @@ final class PhotoTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "photoCell", for: indexPath) as? PhotoTableViewCell else {
             return UITableViewCell()
         }
+        cell.selectionStyle = .none
         
         let evenIndex = indexPath.row * 2
         let oddIndex = evenIndex + 1

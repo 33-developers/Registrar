@@ -84,7 +84,11 @@ final class MemberViewController: UIViewController {
             serialDocument: serialDocument.text ?? "",
             numberDocument: numberDocument.text ?? ""
         )
-        ticket.members.append(member)
+        if nameCar.text == "" || modelCar.text == "" {
+            showAlert(withTitle: "Ошибка!", andMessage: "Заполните поля: марка и модель автомобиля.")
+        } else {
+            ticket.members.append(member)
+        }
     }
 }
 
