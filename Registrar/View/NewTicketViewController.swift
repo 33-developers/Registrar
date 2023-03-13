@@ -12,22 +12,22 @@ final class NewTicketViewController: UIViewController {
     
     var flagEditingMember = true
     
-    @IBOutlet weak var addressTextField: UITextField!
-    
     @IBOutlet weak var tableView: UITableView!
     
-    @IBOutlet weak var addRequestButton: UIButton!
+    @IBOutlet var addNewMember: UIButton!
+    
     
     private var members: [Member] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addRequestButton.layer.cornerRadius = 10
+        addNewMember.layer.cornerRadius = 10
         
         tableView.delegate = self
         tableView.dataSource = self
-        addressTextField.text = ticket.address
+        title = ticket.address
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Назад", style: .plain, target: nil, action: nil)
     }
     
     // обновления таблицы при добавлении новых элементов
@@ -55,6 +55,11 @@ extension NewTicketViewController: UITableViewDelegate, UITableViewDataSource {
         content.secondaryText = member.gosNumber
         cell.contentConfiguration = content
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        ticket.members.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .left)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

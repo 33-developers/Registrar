@@ -28,6 +28,7 @@ final class AddressTableViewController: UITableViewController {
         title = "Адреса заявок"
         
         settingSearchController()
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Заявки", style: .plain, target: nil, action: nil)
     }
     
     // настройка строки поиска
@@ -116,5 +117,12 @@ extension AddressTableViewController: UISearchResultsUpdating {
             return ticket.address.lowercased().contains(searchText.lowercased())
         })
         tableView.reloadData()
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            person.tickets.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
     }
 }
