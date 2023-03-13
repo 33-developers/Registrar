@@ -53,13 +53,13 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="sH3-kW-hdb">
                                                             <rect key="frame" x="90" y="0.0" width="260" height="94"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNJ-FI-9aD">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNJ-FI-9aD">
                                                                     <rect key="frame" x="0.0" y="0.0" width="260" height="44.5"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPf-vk-X5n">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPf-vk-X5n">
                                                                     <rect key="frame" x="0.0" y="49.5" width="260" height="44.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
@@ -433,7 +433,7 @@
                                 <rect key="frame" x="22" y="98" width="370" height="291"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HYw-7I-Xex">
-                                <rect key="frame" x="20" y="409" width="374" height="106.5"/>
+                                <rect key="frame" x="20" y="429" width="374" height="106.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сервис временно не доступен" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNm-BR-VY7">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="29"/>
@@ -453,7 +453,7 @@
                         <viewLayoutGuide key="safeArea" id="eTM-sr-f0x"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="HYw-7I-Xex" firstAttribute="top" secondItem="HK4-Jb-hnB" secondAttribute="bottom" constant="20" id="B1p-Xw-hTT"/>
+                            <constraint firstItem="HYw-7I-Xex" firstAttribute="top" secondItem="HK4-Jb-hnB" secondAttribute="bottom" constant="40" id="B1p-Xw-hTT"/>
                             <constraint firstItem="HK4-Jb-hnB" firstAttribute="centerX" secondItem="fXx-Q6-gYy" secondAttribute="centerX" id="Dmg-aq-nlF"/>
                             <constraint firstItem="HK4-Jb-hnB" firstAttribute="width" secondItem="fXx-Q6-gYy" secondAttribute="width" multiplier="0.893333" id="Heh-qz-HNS"/>
                             <constraint firstAttribute="trailing" secondItem="HYw-7I-Xex" secondAttribute="trailing" constant="20" id="MBI-lg-sC3"/>
