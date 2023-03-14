@@ -1,7 +1,7 @@
 //
 //  DevelopersTableViewCell.swift
 //  Registrar
-//
+// 
 //  Created by Alexey Manokhin on 08.02.2023.
 //
 

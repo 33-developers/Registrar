@@ -1,7 +1,7 @@
 //
 //  InfoPhotoViewController.swift
 //  Registrar
-//
+// 
 //  Created by Игорь Солодянкин on 11.03.2023.
 //
 

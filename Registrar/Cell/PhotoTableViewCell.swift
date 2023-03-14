@@ -1,7 +1,7 @@
 //
 //  PhotoTableViewCell.swift
 //  Registrar
-//
+// 
 //  Created by Айдар Оспанов on 11.03.2023.
 //
 

@@ -1,7 +1,7 @@
 //
 //  Model.swift
 //  Registrar
-//
+// 
 //  Created by Максим Гурков on 31.01.2023.
 //
 import UIKit

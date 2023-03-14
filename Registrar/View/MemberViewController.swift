@@ -1,7 +1,7 @@
 //
 //  MemberViewController.swift
 //  Registrar
-//
+// 
 //  Created by Игорь Солодянкин on 31.01.2023.
 //
 
