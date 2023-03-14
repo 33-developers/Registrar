@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DevelopersTableViewCell: UITableViewCell {
+final class DevelopersTableViewCell: UITableViewCell {
     @IBOutlet var photo: UIImageView!
     
     @IBOutlet var fullNameLabel: UILabel!

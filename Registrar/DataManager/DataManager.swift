@@ -165,7 +165,6 @@ class DataManager {
             )
         ]
     )
-    
     let developers = [
         Developer(
             fullName: "Игорь Солодянкин",
@@ -188,10 +187,6 @@ class DataManager {
             photo: UIImage(named: "maxim") ?? UIImage()
         )
     ]
-    
-    
     init() {}
-    
-    
 }
 

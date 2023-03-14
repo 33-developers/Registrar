@@ -7,8 +7,7 @@
 
 import UIKit
 
-class PhotoTableViewCell: UITableViewCell {
-    
+final class PhotoTableViewCell: UITableViewCell {
     @IBOutlet var firstPhotoButton: UIButton! {
         didSet {
             firstPhotoButton.layer.cornerRadius = 10
