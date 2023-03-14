@@ -83,11 +83,11 @@ extension AuthorizationViewController {
 extension AuthorizationViewController: UITextFieldDelegate {
     // Переход на следующее текстовое поле
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        switch textField {
-        case loginTextField:
-            loginTextField.becomeFirstResponder()
-        default:
-            passwordTextField.resignFirstResponder()
+        
+        if textField == loginTextField {
+            passwordTextField.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
         }
         return true
     }
