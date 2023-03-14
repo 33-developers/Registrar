@@ -29,6 +29,13 @@ final class MemberViewController: UIViewController {
         
         configurationButton()
         memberButton.layer.cornerRadius = 10
+        fullName.delegate = self
+        nameCar.delegate = self
+        modelCar.delegate = self
+        gosNumber.delegate = self
+        companyName.delegate = self
+        serialDocument.delegate = self
+        numberDocument.delegate = self
     }
     
     @IBAction func actionCheckPolicy(_ sender: UIButton) {
@@ -45,6 +52,8 @@ final class MemberViewController: UIViewController {
         }
         navigationController?.popViewController(animated: true)
     }
+    
+    
     
     private func configurationButton() {
         if !flagEditingMember {
@@ -108,5 +117,28 @@ extension MemberViewController {
         let okAction = UIAlertAction(title: "Ok", style: .default)
         alert.addAction(okAction)
         present(alert, animated: true)
+    }
+}
+
+extension MemberViewController: UITextFieldDelegate {
+    // Переход на следующее текстовое поле
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case fullName:
+            nameCar.becomeFirstResponder()
+        case nameCar:
+            modelCar.becomeFirstResponder()
+        case modelCar:
+            gosNumber.becomeFirstResponder()
+        case gosNumber:
+            companyName.becomeFirstResponder()
+        case companyName:
+            serialDocument.becomeFirstResponder()
+        case serialDocument:
+            numberDocument.becomeFirstResponder()
+        default:
+            numberDocument.resignFirstResponder()
+        }
+        return true
     }
 }

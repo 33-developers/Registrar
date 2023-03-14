@@ -23,6 +23,9 @@ final class AuthorizationViewController: UIViewController {
         authorizationButton.layer.cornerRadius = 10
         loginTextField.text = user.login
         passwordTextField.text = user.password
+        
+        loginTextField.delegate = self
+        passwordTextField.delegate = self
     }
     
     @IBAction func actionAuthorizationButton(_ sender: UIButton) {
@@ -74,5 +77,18 @@ extension AuthorizationViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
+    }
+}
+
+extension AuthorizationViewController: UITextFieldDelegate {
+    // Переход на следующее текстовое поле
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case loginTextField:
+            loginTextField.becomeFirstResponder()
+        default:
+            passwordTextField.resignFirstResponder()
+        }
+        return true
     }
 }
