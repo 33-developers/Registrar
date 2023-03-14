@@ -12,32 +12,21 @@ final class AddressTableViewController: UITableViewController {
     var person: User!
     
     private let searchController = UISearchController(searchResultsController: nil)
-    
     private var filteredTicket: [Ticket] = []
     private var searchBarIsEmpty: Bool {
         guard let text = searchController.searchBar.text else { return false }
         return text.isEmpty
     }
-    
     private var isFiltering: Bool {
         return searchController.isActive && !searchBarIsEmpty
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Адреса заявок"
         
+        title = "Адреса заявок"
         settingSearchController()
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Заявки", style: .plain, target: nil, action: nil)
-    }
-    
-    // настройка строки поиска
-    private func settingSearchController() {
-        searchController.searchResultsUpdater = self
-        searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Поиск"
-        navigationItem.searchController = searchController
-        definesPresentationContext = true
     }
     
     @IBAction func addNewTicketButton(_ sender: Any) {
@@ -69,15 +58,7 @@ final class AddressTableViewController: UITableViewController {
         return cell
     }
     
-    // анимация появления ячеек
-    //    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-    //        cell.alpha = 0
-    //        UIView.animate(withDuration: 0.5, delay: 0.1 * Double(indexPath.row), options: .curveEaseInOut, animations: {
-    //            cell.alpha = 1
-    //        })
-    //    }
-    
-    // передача тикета по тапу
+    // Передача данных по тапу на другой экран
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let index = tableView.indexPathForSelectedRow else { return }
         guard let ticketVC = segue.destination as? NewTicketViewController else { return }
@@ -88,6 +69,15 @@ final class AddressTableViewController: UITableViewController {
             ticket = person.tickets[index.row]
         }
         ticketVC.ticket = ticket
+    }
+    
+    // Настройка строки поиска
+    private func settingSearchController() {
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Поиск"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
     }
 }
 

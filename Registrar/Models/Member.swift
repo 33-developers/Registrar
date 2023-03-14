@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Member {
+final class Member {
     var fullName: String
     var nameCar: String
     var modelCar: String

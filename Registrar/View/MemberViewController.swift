@@ -9,12 +9,6 @@ import UIKit
 
 final class MemberViewController: UIViewController {
 
-    var ticket: Ticket!
-    var member: Member!
-    var index: Int!
-    
-    var flagEditingMember = false
-    
     @IBOutlet weak var fullName: UITextField!
     @IBOutlet weak var nameCar: UITextField!
     @IBOutlet weak var modelCar: UITextField!
@@ -25,6 +19,11 @@ final class MemberViewController: UIViewController {
     
     @IBOutlet weak var memberButton: UIButton!
     
+    var ticket: Ticket!
+    var member: Member!
+    var index: Int!
+    var flagEditingMember = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,7 +31,22 @@ final class MemberViewController: UIViewController {
         memberButton.layer.cornerRadius = 10
     }
     
-    func configurationButton() {
+    @IBAction func actionCheckPolicy(_ sender: UIButton) {
+        if serialDocument.text!.isEmpty || numberDocument.text!.isEmpty {
+            showAlert(withTitle: "Ошибка!", andMessage: "Заполните поля: серия и номер полиса.")
+        }
+    }
+    
+    @IBAction func actionWithMember(_ sender: UIButton) {
+        if !flagEditingMember {
+            appendNewMember()
+        } else {
+            editingMember()
+        }
+        navigationController?.popViewController(animated: true)
+    }
+    
+    private func configurationButton() {
         if !flagEditingMember {
             title = "Новый участник"
             memberButton.setTitle("Добавить участника", for: .normal)
@@ -43,7 +57,7 @@ final class MemberViewController: UIViewController {
         }
     }
     
-    func getInfoMember() {
+    private func getInfoMember() {
         fullName.text = member.fullName
         nameCar.text = member.nameCar
         modelCar.text = member.modelCar
@@ -53,28 +67,7 @@ final class MemberViewController: UIViewController {
         numberDocument.text = member.numberDocument
     }
     
-    @IBAction func actionCheckPolicy(_ sender: UIButton) {
-        if serialDocument.text!.isEmpty || numberDocument.text!.isEmpty {
-            showAlert(withTitle: "Ошибка!", andMessage: "Заполните поля: серия и номер полиса.")
-        }
-    }
-    
-    @IBAction func actionAppendNewMember(_ sender: UIButton) {
-        if !flagEditingMember {
-            newMember()
-        } else {
-            member.fullName = fullName.text ?? ""
-            member.nameCar = nameCar.text ?? ""
-            member.modelCar = modelCar.text ?? ""
-            member.gosNumber = gosNumber.text ?? ""
-            member.companyName = companyName.text ?? ""
-            member.serialDocument = serialDocument.text ?? ""
-            member.numberDocument = numberDocument.text ?? ""
-        }
-        navigationController?.popViewController(animated: true)
-    }
-    
-    func newMember() {
+    private func appendNewMember() {
         let member = Member(
             fullName: fullName.text ?? "",
             nameCar: nameCar.text ?? "",
@@ -90,10 +83,26 @@ final class MemberViewController: UIViewController {
             ticket.members.append(member)
         }
     }
+    
+    private func editingMember() {
+        member.fullName = fullName.text ?? ""
+        member.nameCar = nameCar.text ?? ""
+        member.modelCar = modelCar.text ?? ""
+        member.gosNumber = gosNumber.text ?? ""
+        member.companyName = companyName.text ?? ""
+        member.serialDocument = serialDocument.text ?? ""
+        member.numberDocument = numberDocument.text ?? ""
+    }
 }
 
-// всплывающее окно
 extension MemberViewController {
+    // Закрытие клавиатуры по тапу
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
+    // Всплывающее окно
     private func showAlert(withTitle title: String, andMessage message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default)

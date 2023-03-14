@@ -8,24 +8,23 @@
 import UIKit
 
 final class NewTicketViewController: UIViewController {
-    var ticket: Ticket!
-    
-    var flagEditingMember = true
     
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet var addNewMember: UIButton!
     
+    var ticket: Ticket!
+    var flagEditingMember = true
     
     private var members: [Member] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addNewMember.layer.cornerRadius = 10
-        
         tableView.delegate = self
         tableView.dataSource = self
+        
+        addNewMember.layer.cornerRadius = 10
         title = ticket.address
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Назад", style: .plain, target: nil, action: nil)
     }
@@ -57,15 +56,24 @@ extension NewTicketViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    // Переименование кнопки удаления
     func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
         return "Удалить"
     }
     
+    // Удаление ячейки
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         ticket.members.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .left)
     }
     
+    // Закрытие клавиатуры по тапу
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
+    // Переход на другой экран
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let photoVC = segue.destination as? PhotoTableViewController {
             photoVC.ticket = ticket

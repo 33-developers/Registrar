@@ -366,7 +366,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Добавить участника"/>
                                 <connections>
-                                    <action selector="actionAppendNewMember:" destination="8TD-yh-c0f" eventType="touchUpInside" id="htv-Zq-Jsq"/>
+                                    <action selector="actionWithMember:" destination="8TD-yh-c0f" eventType="touchUpInside" id="ojH-D2-2TL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -554,10 +554,10 @@
             </objects>
             <point key="canvasLocation" x="1774" y="846"/>
         </scene>
-        <!--Address Table View Controller-->
+        <!--Список заявок-->
         <scene sceneID="rS2-F7-Fsg">
             <objects>
-                <tableViewController storyboardIdentifier="address" modalPresentationStyle="fullScreen" id="E9V-QS-Al6" customClass="AddressTableViewController" customModule="Registrar" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="address" title="Список заявок" modalPresentationStyle="fullScreen" id="E9V-QS-Al6" customClass="AddressTableViewController" customModule="Registrar" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" id="BYl-Ad-dQ5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
