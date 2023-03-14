@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol AuthVCDelegate: AnyObject {
+    func getEmpty(property: String)
+}
+
 final class AuthorizationViewController: UIViewController {
     
     var user = User.newUser()
@@ -50,6 +54,7 @@ final class AuthorizationViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let addressVC = segue.destination as? AddressTableViewController else { return }
         addressVC.person = user
+        addressVC.delegate = self
     }
     
     private func getAlertMessage(title: String, message: String) {
@@ -70,6 +75,13 @@ final class AuthorizationViewController: UIViewController {
     
     @IBAction func forgotButtonTapped() {
         getAlertMessage(title: "Ой!💡", message: "Логин: \(user.login)\nПароль: \(user.password)")
+    }
+}
+
+extension AuthorizationViewController: AuthVCDelegate {
+    func getEmpty(property: String) {
+        loginTextField.text = property
+        passwordTextField.text = property
     }
 }
 

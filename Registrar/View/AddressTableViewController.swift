@@ -10,6 +10,7 @@ import UIKit
 final class AddressTableViewController: UITableViewController {
     
     var person: User!
+    var delegate: AuthVCDelegate!
     
     private let searchController = UISearchController(searchResultsController: nil)
     private var filteredTicket: [Ticket] = []
@@ -25,6 +26,7 @@ final class AddressTableViewController: UITableViewController {
         super.viewDidLoad()
         
         title = "Адреса заявок"
+        delegate.getEmpty(property: "")
         settingSearchController()
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Заявки", style: .plain, target: nil, action: nil)
     }
