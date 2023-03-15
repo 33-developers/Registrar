@@ -40,7 +40,7 @@ P.S. Логотип "33 developers" связано с номером поток�
 
 
 Ссылки на GitHub разработчиков:
-[Манохин Алексей](https://github.com/Manohin)
-[Оспанов Айдар](https://github.com/Ospanidze)
-[Гурков Максим](https://github.com/maksimgurkov)
-[Солодянкин Игорь](https://github.com/SoloNineZero)
+- [Манохин Алексей](https://github.com/Manohin)
+- [Оспанов Айдар](https://github.com/Ospanidze)
+- [Гурков Максим](https://github.com/maksimgurkov)
+- [Солодянкин Игорь](https://github.com/SoloNineZero)
