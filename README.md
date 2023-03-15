@@ -7,7 +7,7 @@
 
 <!-- ![Simulator Screen Shot - iPhone SE (3rd generation) - 2023-03-14 at 14 27 59](https://user-images.githubusercontent.com/121757460/225208990-edf225c2-83a5-4e10-a913-f92d8ec14bf4.png) -->
 
-<img width="300" src="https://user-images.githubusercontent.com/121757460/225208990-edf225c2-83a5-4e10-a913-f92d8ec14bf4.png)">
+<img width="300" src="[https://user-images.githubusercontent.com/121757460/225208990-edf225c2-83a5-4e10-a913-f92d8ec14bf4.png)](https://user-images.githubusercontent.com/121757460/225208990-edf225c2-83a5-4e10-a913-f92d8ec14bf4.png)">
 
 В верхнем правом углу красная кнопка ведёт на экран разработчиков.
 ![Simulator Screen Shot - iPhone SE (3rd generation) - 2023-03-14 at 14 28 51](https://user-images.githubusercontent.com/121757460/225206828-8299b846-8bb8-4d3e-8063-e418fa5d1482.png)
