@@ -18,7 +18,7 @@ final class PhotoTableViewController: UITableViewController {
     }
     
     @IBAction func openCameraButton(_ sender: Any) {
-        showAlert(withTitle: "⚠️", andMessage: "Неизвестная ошибка. \nКамера не доступна.")
+        showAlert(withTitle: "⚠️", andMessage: "Неизвестная ошибка. \nКамера недоступна.")
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
