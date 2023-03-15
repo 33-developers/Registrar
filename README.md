@@ -5,8 +5,7 @@
 Приложение узконаправленное, создано для [Авариыйных комиссаров](https://ru.wikipedia.org/wiki/Аварийный_комиссар).
 1. Экран авторизации. Для удобства, по умолчанию прописали данные для авторизации. Кнопка "забыли данные для входа" вызывает Alert, в котором выводятся данные для авторизации.
 
-<!-- ![Simulator Screen Shot - iPhone SE (3rd generation) - 2023-03-14 at 14 27 59](https://user-images.githubusercontent.com/121757460/225206798-4b4d6728-c4bf-41e5-98b7-cd310bf3b5ee.png) -->
-<img src="[path/to/screenshot.png](https://user-images.githubusercontent.com/121757460/225206798-4b4d6728-c4bf-41e5-98b7-cd310bf3b5ee.png)" width="300">
+![Simulator Screen Shot - iPhone SE (3rd generation) - 2023-03-14 at 14 27 59](https://user-images.githubusercontent.com/121757460/225206798-4b4d6728-c4bf-41e5-98b7-cd310bf3b5ee.png)
 
 В верхнем правом углу красная кнопка ведёт на экран разработчиков.
 ![Simulator Screen Shot - iPhone SE (3rd generation) - 2023-03-14 at 14 28 51](https://user-images.githubusercontent.com/121757460/225206828-8299b846-8bb8-4d3e-8063-e418fa5d1482.png)
