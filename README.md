@@ -37,3 +37,10 @@ P.S. если протянуть таблицу вниз - появится ст
 На этом всё, спасибо за внимание)
 
 P.S. Логотип "33 developers" связано с номером потока =)
+
+
+Ссылки на GitHub разработчиков:
+[Манохин Алексей](https://github.com/Manohin)
+[Оспанов Айдар](https://github.com/Ospanidze)
+[Гурков Максим](https://github.com/maksimgurkov)
+[Солодянкин Игорь](https://github.com/SoloNineZero)
